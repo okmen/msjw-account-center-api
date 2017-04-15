@@ -1,10 +1,17 @@
 package cn.account.bean.vo;
+
+import java.io.Serializable;
+
 /**
  * 信息单Vo
  * @author Mbenben
  *
  */
-public class InformationSheetVo {
+public class InformationSheetVo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 车牌号
 	 */
@@ -22,7 +29,7 @@ public class InformationSheetVo {
 	 */
 	private String idCard;
 	/**
-	 * 状态代码
+	 * 状态代码  0-待审核 1-审核通过，信息单查询结果图片尚未同步出来，请耐心等待 2-审核通过，信息单查询结果图片已同步，可选择电脑打印或手机图片保存
 	 */
 	private String statusCode;
 	/**

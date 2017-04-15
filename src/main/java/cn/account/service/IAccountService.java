@@ -3,14 +3,9 @@ package cn.account.service;
 import java.util.List;
 import java.util.Map;
 
-
 import com.alibaba.fastjson.JSONObject;
 
-import cn.account.bean.DeviceBean;
-import cn.account.bean.Token;
 import cn.account.bean.UserBind;
-import cn.account.bean.UserOpenidBean;
-import cn.account.bean.UserRegInfo;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
@@ -181,6 +176,15 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public MotorVehicleInformationSheetVo getMotorVehicleInformationSheet(String identityCard, String sourceOfCertification)throws Exception;
+	/**
+	 * 
+	 * @param applyType
+	 * @param identityCard
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception 
+	 */
+	public Map<String, Object> queryMachineInformationSheet(String applyType, String identityCard,String sourceOfCertification) throws Exception;
 	
 //	/**
 //	 * 添加新用户
@@ -344,6 +348,8 @@ public interface IAccountService {
     		, String img, String situationStatement
     		, String whistleblower, String identityCard
     		, String mobilephone)throws Exception;
+
+    
     
     
 	
