@@ -3,8 +3,17 @@ package cn.account.service;
 import java.util.List;
 import java.util.Map;
 
+
+import com.alibaba.fastjson.JSONObject;
+
+import cn.account.bean.DeviceBean;
+import cn.account.bean.Token;
+import cn.account.bean.UserBind;
+import cn.account.bean.UserOpenidBean;
+import cn.account.bean.UserRegInfo;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
+import cn.account.bean.vo.BindCarVo;
 import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
@@ -12,6 +21,8 @@ import cn.account.bean.vo.ElectronicDriverLicenseVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
+import cn.account.bean.vo.RegisterVo;
+import cn.account.bean.vo.UserBasicVo;
 import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
 import cn.account.bean.vo.queryclassservice.DriverLicenseBusinessVo;
 import cn.account.bean.vo.queryclassservice.MakeAnAppointmentVo;
@@ -170,6 +181,7 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public MotorVehicleInformationSheetVo getMotorVehicleInformationSheet(String identityCard, String sourceOfCertification)throws Exception;
+	
 //	/**
 //	 * 添加新用户
 //	 * 
@@ -287,5 +299,52 @@ public interface IAccountService {
 //     */
 //    public boolean updateDevice(String deviceUuid,int osType,long userId);
 //    
+	
+	/**
+	 * 取消绑定微信
+	 * @author liuminkang
+	 * @param userBind
+	 * @return
+	 */
+	int unbindVehicle(UserBind userBind);
+	
+	
+	/**
+	* @Title: addVehicle
+	* @author liuminkang
+	* @Description: TODO(绑定车辆)
+	* @param @return    设定文件
+	* @return String    返回类型
+	* @throws
+	 */
+	JSONObject addVehicle(BindCarVo bindCarVo)throws Exception;
+	
+	
+	JSONObject updateUser(UserBasicVo userBasicVo)throws Exception;
+	
+	
+	JSONObject updateMobile(UserBasicVo userBasicVo)throws Exception;
+	
+	
+	JSONObject updatePwd(UserBasicVo userBasicVo)throws Exception;
+	
+	JSONObject iAmTheOwner(RegisterVo registerVo) throws Exception;
+
+	JSONObject isPedestrianNotDriver( String identityCard,String mobilephone,String idCardImgPositive,String idCardImgHandHeld) throws Exception;
+	
+	JSONObject iamALongtimeUser( String licensePlateType, String provinceAbbreviation,String licensePlateNumber, String ownerName
+    		,String ownerIdCard, String userIdCard, String linkAddress,String mobilephone, String driverLicenseIssuedAddress
+    		, String idCardImgPositive, String idCardImgHandHeld)throws Exception;
+	
+    JSONObject haveDriverLicenseNotCar(String identityCard, String linkAddress
+    		 ,String mobilephone,String driverLicenseIssuedAddress,String idCardImgPositive
+    		 ,String idCardImgHandHeld)throws Exception;
     
+    JSONObject  readilyShoot(String illegalTime, String illegalSections    		
+    		, String img, String situationStatement
+    		, String whistleblower, String identityCard
+    		, String mobilephone)throws Exception;
+    
+    
+	
 }
