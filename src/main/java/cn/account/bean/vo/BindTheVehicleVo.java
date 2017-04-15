@@ -1,10 +1,17 @@
 package cn.account.bean.vo;
+
+import java.io.Serializable;
+
 /**
  * 已绑定车辆
  * @author Mbenben
  *
  */
-public class BindTheVehicleVo {
+public class BindTheVehicleVo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 号牌号码
 	 */
@@ -40,7 +47,7 @@ public class BindTheVehicleVo {
 	/**
 	 * 未处理违法数量
 	 */
-	private Integer illegalNumber;
+	private String illegalNumber;
 	/**
 	 * 车辆是否有其他人使用
 	 */
@@ -94,10 +101,10 @@ public class BindTheVehicleVo {
 	public void setMobilephone(String mobilephone) {
 		this.mobilephone = mobilephone;
 	}
-	public Integer getIllegalNumber() {
+	public String getIllegalNumber() {
 		return illegalNumber;
 	}
-	public void setIllegalNumber(Integer illegalNumber) {
+	public void setIllegalNumber(String illegalNumber) {
 		this.illegalNumber = illegalNumber;
 	}
 	public String getOtherPeopleUse() {

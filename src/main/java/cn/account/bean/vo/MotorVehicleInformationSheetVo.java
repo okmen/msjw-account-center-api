@@ -1,12 +1,17 @@
 package cn.account.bean.vo;
 
+import java.io.Serializable;
 import java.util.List;
 /**
  * 机动车信息单
  * @author Mbenben
  *
  */
-public class MotorVehicleInformationSheetVo {
+public class MotorVehicleInformationSheetVo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 姓名
 	 */

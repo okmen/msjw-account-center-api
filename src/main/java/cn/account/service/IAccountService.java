@@ -1,8 +1,10 @@
 package cn.account.service;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.account.bean.WechatUserInfoBean;
+import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
@@ -42,10 +44,13 @@ public interface IAccountService {
 	List<WechatUserInfoBean> getAllWechatUserInfoBeanList();
 	/**
 	 * 登录
+	 * @param loginName 登录账号
+	 * @param password 密码
+	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	public LoginReturnBeanVo login(String loginName,String password) throws Exception;
+	public LoginReturnBeanVo login(String loginName,String password,String sourceOfCertification) throws Exception;
 	/**
 	 * 获取机动车信息单
 	 * @param identityCard 身份证号
@@ -60,9 +65,10 @@ public interface IAccountService {
      * @param provinceAbbreviation 车牌核发省简称 例如：粤
      * @param numberPlateNumber 号牌号码 例如：B701NR
      * @param plateType 车辆类型 例如:小型汽车
+     * @param sourceOfCertification 认证来源 微信-C
      */
-	public void commitMotorVehicleInformationSheet(String userName,String identityCard,
-    		String mobilephone,String provinceAbbreviation,String numberPlateNumber, String plateType);
+	public Map<String, String> commitMotorVehicleInformationSheet(String userName, String identityCard, String mobilephone,
+			String provinceAbbreviation, String numberPlateNumber, String plateType,String sourceOfCertification)throws Exception;
 	/**
 	 * 获取驾驶证信息单
 	 * @param identityCard 身份证号
@@ -70,13 +76,15 @@ public interface IAccountService {
 	 */
 	public DriverLicenseInformationSheetVo getDriverLicenseInformationSheet(String identityCard);
 	/**
-	 * 提交驾驶证信息单
+	 * 提交 代表驾驶人信息单/无车证明申请/驾驶人安全事故信用表
+	 * @param applyType 申请类型（1代表驾驶人信息单；2代表机动车信息单 3代表无车证明申请；4代表驾驶人安全事故信用表）
 	 * @param userName 姓名
 	 * @param identityCard 身份证号
 	 * @param mobilephone 联系电话
 	 * @return
+	 * @throws Exception 
 	 */
-	public DriverLicenseInformationSheetVo commitDriverLicenseInformationSheet(String userName,String identityCard,String mobilephone);
+	public Map<String, String> commitDriverLicenseInformationSheet(String applyType, String userName, String identityCard,String mobilephone,String sourceOfCertification) throws Exception;
 	/**
 	 * 用户中心-查询类服务-预约查询-机动车业务/驾驶证业务
 	 * @param businessType 业务类型	1-机动车业务、2-驾驶证业务
@@ -119,26 +127,49 @@ public interface IAccountService {
 	 * @param userName 姓名
 	 * @param mobileNumber 申请手机号码
 	 * @return
+	 * @throws Exception 
 	 */
-	public ElectronicDriverLicenseVo getElectronicDriverLicense(String driverLicenseNumber,String userName,String mobileNumber);
+	public ElectronicDriverLicenseVo getElectronicDriverLicense(String driverLicenseNumber, String userName,String mobileNumber,String sourceOfCertification) throws Exception;
 	/**
 	 * 用户中心-电子行驶证
 	 * @param numberPlatenumber 号牌号码
 	 * @param plateType 号牌种类
 	 * @param mobileNumber 申请手机号码
-	 * @return
+	 * @return DrivingLicenseVo
 	 */
-	public DrivingLicenseVo getDrivingLicense(String numberPlatenumber,String plateType,String mobileNumber);
+	public DrivingLicenseVo getDrivingLicense(String numberPlatenumber, String plateType, String mobileNumber,String sourceOfCertification)throws Exception;
 	/**
 	 * 用户中心-我的驾驶证
 	 * @param identityCard 身份证号
+	 * @throws Exception 
 	 */
-	public MyDriverLicenseVo getMyDriverLicense(String identityCard);
+	public MyDriverLicenseVo getMyDriverLicense(String identityCard,String sourceOfCertification) throws Exception;
 	/**
-	 * 用户中心-查询已绑车辆
-	 * @param identityCard 身份证号
+	 * 查询已绑车辆
+	 * @param identityCard 身份证
+	 * @param mobilephone 手机号
+	 * @param sourceOfCertification 认证来源
+	 * @return
+	 * @throws Exception 
 	 */
-	public List<BindTheVehicleVo> getBndTheVehicles(String identityCard);
+	public List<BindTheVehicleVo> getBndTheVehicles(String identityCard,String mobilephone,String sourceOfCertification) throws Exception;
+	
+	/**
+	 * 认证基本信息查询接口
+	 * @param idCard 身份证
+	 * @param sourceOfCertification 认证来源
+	 * @return
+	 * @throws Exception
+	 */
+	public AuthenticationBasicInformationVo authenticationBasicInformationQuery(String idCard,String sourceOfCertification) throws Exception;
+	/**
+	 * 获取机动车信息单
+	 * @param identityCard 身份证
+	 * @param sourceOfCertification 认证来源
+	 * @return
+	 * @throws Exception
+	 */
+	public MotorVehicleInformationSheetVo getMotorVehicleInformationSheet(String identityCard, String sourceOfCertification)throws Exception;
 //	/**
 //	 * 添加新用户
 //	 * 
