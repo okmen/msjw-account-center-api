@@ -1,6 +1,10 @@
 package cn.account.bean.vo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.alibaba.fastjson.JSON;
 
 /**
  * 认证基本信息
@@ -63,4 +67,17 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 		this.myAvatar = myAvatar;
 	}
 
+	
+	public static void main(String[] args) {
+		List<InformationSheetVo> informationSheetVos = new ArrayList<InformationSheetVo>();
+		InformationSheetVo informationSheetVo1 = new InformationSheetVo();
+		informationSheetVo1.setApplicationTime("11111111111");
+		InformationSheetVo informationSheetVo2 = new InformationSheetVo();
+		informationSheetVo2.setApplicationTime("222222222222");
+		
+		informationSheetVos.add(informationSheetVo1);
+		informationSheetVos.add(informationSheetVo2);
+		
+		System.out.println(JSON.toJSONString(informationSheetVos));
+	}
 }

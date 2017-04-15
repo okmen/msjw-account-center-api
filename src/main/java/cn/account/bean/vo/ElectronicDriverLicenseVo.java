@@ -1,10 +1,17 @@
 package cn.account.bean.vo;
+
+import java.io.Serializable;
+
 /**
  * 电子驾驶证
  * @author Mbenben
  *
  */
-public class ElectronicDriverLicenseVo {
+public class ElectronicDriverLicenseVo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 电子驾驶证
 	 */

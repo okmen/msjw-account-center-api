@@ -2,12 +2,14 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import cn.sdk.bean.BaseBean;
+
 /**
  * 登录返回的对象
  * @author Mbenben
  *
  */
-public class LoginReturnBeanVo implements Serializable{
+public class LoginReturnBeanVo extends BaseBean implements Serializable{
 	/**
 	 * 
 	 */
@@ -17,7 +19,7 @@ public class LoginReturnBeanVo implements Serializable{
 	 */
 	private AuthenticationBasicInformationVo authenticationBasicInformation;
 	/**
-	 * 认证基本信息
+	 * 身份认证审核结果
 	 */
 	private IdentityVerificationAuditResultsVo identityVerificationAuditResults;
 	public AuthenticationBasicInformationVo getAuthenticationBasicInformation() {

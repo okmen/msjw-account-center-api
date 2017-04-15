@@ -1,10 +1,19 @@
 package cn.account.bean.vo;
+
+import java.io.Serializable;
+
+import cn.sdk.bean.BaseBean;
+
 /**
  * 驾驶证
  * @author Mbenben
  *
  */
-public class MyDriverLicenseVo {
+public class MyDriverLicenseVo extends BaseBean implements Serializable{			
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 档案编号
 	 */
