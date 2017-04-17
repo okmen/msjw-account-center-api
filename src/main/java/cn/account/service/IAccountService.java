@@ -53,10 +53,12 @@ public interface IAccountService {
 	 * @param loginName 登录账号
 	 * @param password 密码
 	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
+	 * @param openId 登录的openId 支付宝openId、微信openId
+	 * @param loginClient 登录的客户端类型 支付宝、微信等
 	 * @return
 	 * @throws Exception
 	 */
-	public LoginReturnBeanVo login(String loginName,String password,String sourceOfCertification) throws Exception;
+	public LoginReturnBeanVo login(String loginName,String password,String sourceOfCertification,String openId,String loginClient) throws Exception;
 	/**
 	 * 获取机动车信息单
 	 * @param identityCard 身份证号
@@ -185,6 +187,28 @@ public interface IAccountService {
 	 * @throws Exception 
 	 */
 	public Map<String, Object> queryMachineInformationSheet(String applyType, String identityCard,String sourceOfCertification) throws Exception;
+	/**
+	 * 我的业务(切换查询-机动车业务、驾驶证业务)
+	 * @param businessType 业务类型		0-全部、1-机动车业务、2-驾驶证业务
+	 * @param businessStatus	业务状态 		0-全部、1-办理中、2-已完结
+	 * @param identityCard 身份证
+	 * @param sourceOfCertification 认证来源
+	 * @return
+	 * @throws Exception 
+	 */
+	public Object getMyBusiness(Integer businessType, Integer businessStatus, String identityCard,String sourceOfCertification) throws Exception;
+	/**
+	 * 发送验证码
+	 * @param mobilephone
+	 */
+	public void sendSMSVerificatioCode(String mobilephone);
+	/**
+	 * 验证验证码是否正确
+	 * @param mobilephone 手机号
+	 * @param validateCode 短信验证码
+	 * @param 0-验证成功，1-验证失败，2-验证码失效
+	 */
+	public int verificatioCode(String mobilephone,String validateCode);
 	
 //	/**
 //	 * 添加新用户
@@ -348,6 +372,8 @@ public interface IAccountService {
     		, String img, String situationStatement
     		, String whistleblower, String identityCard
     		, String mobilephone)throws Exception;
+
+	
 
     
     
