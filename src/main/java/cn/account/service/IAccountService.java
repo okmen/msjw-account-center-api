@@ -201,7 +201,7 @@ public interface IAccountService {
 	 * 发送验证码
 	 * @param mobilephone
 	 */
-	public void sendSMSVerificatioCode(String mobilephone);
+	public void sendSMSVerificatioCode(String mobilephone,String valideteCode);
 	/**
 	 * 验证验证码是否正确
 	 * @param mobilephone 手机号
