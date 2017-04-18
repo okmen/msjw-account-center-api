@@ -10,6 +10,7 @@ public class UserBind implements Serializable{
 	private int id;
 	private String openId;//微信用户在某公众号的唯一标识
 	private String idCard;//身份证号
+	private String unionId;//支付宝id
 	private String mobileNumber; //手机号
 	private int isBind;//绑定状态
 	private Date bindDate;//绑定时间
@@ -65,6 +66,15 @@ public class UserBind implements Serializable{
 	}
 	public void setClientType(String clientType) {
 		this.clientType = clientType;
+	}
+	public String getUnionId() {
+		return unionId;
+	}
+	public void setUnionId(String unionId) {
+		this.unionId = unionId;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 	

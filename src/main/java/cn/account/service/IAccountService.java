@@ -17,6 +17,7 @@ import cn.account.bean.vo.LoginReturnBeanVo;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
+import cn.account.bean.vo.ReadilyShootVo;
 import cn.account.bean.vo.RegisterVo;
 import cn.account.bean.vo.UserBasicVo;
 import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
@@ -329,6 +330,7 @@ public interface IAccountService {
 //    public boolean updateDevice(String deviceUuid,int osType,long userId);
 //    
 	
+
 	/**
 	 * 取消绑定微信
 	 * @author liuminkang
@@ -348,34 +350,109 @@ public interface IAccountService {
 	 */
 	JSONObject addVehicle(BindCarVo bindCarVo)throws Exception;
 	
-	
+	/**
+	 * 
+	 * @Title: updateUser 
+	 * @author liuminkang
+	 * @Description: TODO(修改个人资料) 
+	 * @param userBasicVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:41
+	 */
 	JSONObject updateUser(UserBasicVo userBasicVo)throws Exception;
 	
-	
+	/**
+	 * 
+	 * @Title: updateMobile 
+	 * @author liuminkang
+	 * @Description: TODO(修改手机号) 
+	 * @param userBasicVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:46
+	 */
 	JSONObject updateMobile(UserBasicVo userBasicVo)throws Exception;
 	
-	
+	/**
+	 * 
+	 * @Title: updatePwd 
+	 * @author liuminkang
+	 * @Description: TODO(修改密码) 
+	 * @param userBasicVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:49
+	 */
 	JSONObject updatePwd(UserBasicVo userBasicVo)throws Exception;
 	
+	/**
+	 * 
+	 * @Title: readilyShoot 
+	 * @author liuminkang
+	 * @Description: TODO(随手拍举报) 
+	 * @param readilyShootVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:52
+	 */
+	JSONObject  readilyShoot(ReadilyShootVo readilyShootVo)throws Exception;
+	
+	/**
+	 * 
+	 * @Title: iAmTheOwner 
+	 * @author liuminkang
+	 * @Description: TODO(车主认证) 
+	 * @param registerVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:55
+	 */
 	JSONObject iAmTheOwner(RegisterVo registerVo) throws Exception;
 
-	JSONObject isPedestrianNotDriver( String identityCard,String mobilephone,String idCardImgPositive,String idCardImgHandHeld) throws Exception;
+	/**
+	 * 
+	 * @Title: iamALongtimeUser 
+	 * @author liuminkang
+	 * @Description: TODO(长期使用人认证) 
+	 * @param registerVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:48:59
+	 */
+	JSONObject iamALongtimeUser(RegisterVo registerVo)throws Exception;
 	
-	JSONObject iamALongtimeUser( String licensePlateType, String provinceAbbreviation,String licensePlateNumber, String ownerName
-    		,String ownerIdCard, String userIdCard, String linkAddress,String mobilephone, String driverLicenseIssuedAddress
-    		, String idCardImgPositive, String idCardImgHandHeld)throws Exception;
+	/**
+	 * 
+	 * @Title: haveDriverLicenseNotCar 
+	 * @author liuminkang
+	 * @Description: TODO(有驾驶证无车认证) 
+	 * @param registerVo
+	 * @return
+	 * @throws Exception    设定文件 
+	 * @return JSONObject    返回类型 
+	 * @date 2017年4月18日 下午7:49:03
+	 */
+    JSONObject haveDriverLicenseNotCar(RegisterVo registerVo)throws Exception;
 	
-    JSONObject haveDriverLicenseNotCar(String identityCard, String linkAddress
-    		 ,String mobilephone,String driverLicenseIssuedAddress,String idCardImgPositive
-    		 ,String idCardImgHandHeld)throws Exception;
-    
-    JSONObject  readilyShoot(String illegalTime, String illegalSections    		
-    		, String img, String situationStatement
-    		, String whistleblower, String identityCard
-    		, String mobilephone)throws Exception;
-
-	
-
+    /**
+     * 
+     * @Title: isPedestrianNotDriver 
+     * @author liuminkang
+     * @Description: TODO(行人认证) 
+     * @param registerVo
+     * @return
+     * @throws Exception    设定文件 
+     * @return JSONObject    返回类型 
+     * @date 2017年4月18日 下午7:49:06
+     */
+	JSONObject isPedestrianNotDriver(RegisterVo registerVo) throws Exception;
     
     
     
