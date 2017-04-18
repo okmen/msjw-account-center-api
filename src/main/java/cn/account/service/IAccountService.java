@@ -15,6 +15,7 @@ import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
+import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
 import cn.account.bean.vo.RegisterVo;
 import cn.account.bean.vo.UserBasicVo;
@@ -196,7 +197,7 @@ public interface IAccountService {
 	 * @return
 	 * @throws Exception 
 	 */
-	public Object getMyBusiness(Integer businessType, Integer businessStatus, String identityCard,String sourceOfCertification) throws Exception;
+	public List<MyBusinessVo> getMyBusiness(Integer businessType, Integer businessStatus, String identityCard,String sourceOfCertification) throws Exception;
 	/**
 	 * 发送验证码
 	 * @param mobilephone
