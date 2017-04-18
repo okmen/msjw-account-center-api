@@ -19,10 +19,12 @@ public class MyBusinessVo implements Serializable{
 	private String vehicleNumber;
 	//受理时间
 	private String receptionTime;
-	//状态 0-全部，1-办理中，2-已完结
+	//业务状态	0-全部、1-办理中、2-已完结
 	private Integer status;
 	//原始状态名称
 	private String statusStr;
+	//业务类型	0-全部、1-机动车业务、2-驾驶证业务
+	private Integer businessType;
 	//姓名
 	private String userName;
 	//身份证
@@ -31,6 +33,9 @@ public class MyBusinessVo implements Serializable{
 	private String applicationTime;
 	//号牌种类例如 蓝牌
 	private String plateType;
+	//具体业务 1、驾驶人信息单；2、机动车信息单；3、无车证明申请；4、驾驶人安全事故信用表；5、机动车行驶证；6、驾驶证
+	private Integer detailedBusiness;
+	
 	public String getBusinessTitle() {
 		return businessTitle;
 	}
@@ -85,6 +90,17 @@ public class MyBusinessVo implements Serializable{
 	public void setStatusStr(String statusStr) {
 		this.statusStr = statusStr;
 	}
-	
+	public Integer getBusinessType() {
+		return businessType;
+	}
+	public void setBusinessType(Integer businessType) {
+		this.businessType = businessType;
+	}
+	public Integer getDetailedBusiness() {
+		return detailedBusiness;
+	}
+	public void setDetailedBusiness(Integer detailedBusiness) {
+		this.detailedBusiness = detailedBusiness;
+	}
 	
 }
