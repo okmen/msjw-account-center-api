@@ -1,7 +1,21 @@
 package cn.account.bean.vo;
 
-public class RegisterVo {
+import java.io.Serializable;
+
+
+/**
+ * 用户认证信息
+ * @author liuminkang
+ *
+ */
+public class RegisterVo implements Serializable {
+
 	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 身份证明号码
@@ -248,6 +262,10 @@ public class RegisterVo {
 
 	public void setOwnerIdCardImgHandHeld(String ownerIdCardImgHandHeld) {
 		this.ownerIdCardImgHandHeld = ownerIdCardImgHandHeld;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 	

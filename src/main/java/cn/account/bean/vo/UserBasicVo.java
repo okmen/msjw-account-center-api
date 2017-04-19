@@ -1,7 +1,20 @@
 package cn.account.bean.vo;
 
-public class UserBasicVo {
+import java.io.Serializable;
+
+
+/**
+ * 用户基本信息
+ * @author liuminkang
+ *
+ */
+public class UserBasicVo implements Serializable {
+
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 身份证明号码
@@ -23,6 +36,11 @@ public class UserBasicVo {
 	 * 本人身份证正面图片
 	 */
 	private String idCardImgPositive;
+	
+	/**
+	 * 本人身份证背面图片
+	 */
+	private String idCardImgNegative;
 	
 	/**
 	 * 当事人手持身份证图片
@@ -91,6 +109,14 @@ public class UserBasicVo {
 		this.idCardImgPositive = idCardImgPositive;
 	}
 
+	public String getIdCardImgNegative() {
+		return idCardImgNegative;
+	}
+
+	public void setIdCardImgNegative(String idCardImgNegative) {
+		this.idCardImgNegative = idCardImgNegative;
+	}
+
 	public String getIdCardImgHandHeld() {
 		return IdCardImgHandHeld;
 	}
@@ -145,6 +171,10 @@ public class UserBasicVo {
 
 	public void setNewPwd(String newPwd) {
 		this.newPwd = newPwd;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	
 	

@@ -1,6 +1,15 @@
 package cn.account.bean.vo;
 
-public class BindCarVo {
+import java.io.Serializable;
+
+
+public class BindCarVo implements Serializable{
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 登录用户身份证明号码
@@ -169,6 +178,10 @@ public class BindCarVo {
 
 	public void setIdCardImgHandHeld(String idCardImgHandHeld) {
 		this.idCardImgHandHeld = idCardImgHandHeld;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }

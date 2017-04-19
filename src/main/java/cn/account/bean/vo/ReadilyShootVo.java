@@ -191,6 +191,12 @@ public class ReadilyShootVo implements Serializable{
 		this.userNumber = userNumber;
 	}
 
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
 	
 
 }

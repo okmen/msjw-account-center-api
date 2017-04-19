@@ -3,6 +3,11 @@ package cn.account.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 用户绑定信息
+ * @author liuminkang
+ *
+ */
 public class UserBind implements Serializable{
 
 	private static final long serialVersionUID = 6269417708512714184L;

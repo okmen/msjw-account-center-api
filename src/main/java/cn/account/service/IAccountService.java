@@ -460,6 +460,7 @@ public interface IAccountService {
      * @date 2017年4月18日 下午7:49:06
      */
 	JSONObject isPedestrianNotDriver(RegisterVo registerVo) throws Exception;
+
     
     
     
