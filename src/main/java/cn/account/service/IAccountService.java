@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
 
+import cn.account.bean.Documentation;
 import cn.account.bean.UserBind;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
@@ -29,7 +30,13 @@ import cn.account.bean.vo.queryclassservice.MotorVehicleBusinessVo;
  * @author suntao
  */
 public interface IAccountService {
-	
+	/**
+	 * 根据须知文档key查询
+	 * @param noticeKey
+	 * @return Documentation
+	 * @throws Exception
+	 */
+	public Documentation getDocumentationByNoticeKey(String noticeKey)throws Exception;
 	
 	/**
 	 * 插入微信用户信息
