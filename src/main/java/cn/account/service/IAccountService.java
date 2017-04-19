@@ -58,6 +58,15 @@ public interface IAccountService {
 	 */
 	List<WechatUserInfoBean> getAllWechatUserInfoBeanList();
 	/**
+	 * 查询用户基本信息接口
+	 * @param identityCard 身份证
+	 * @param sourceOfCertification 认证来源    A-移动APP 	C-微信	Z-支付宝		E-邮政		W-外网星火
+	 * @param mobilephone
+	 * @return
+	 * @throws Exception
+	 */
+	public AuthenticationBasicInformationVo getAuthenticationBasicInformation(String identityCard,String sourceOfCertification,String mobilephone) throws Exception;
+	/**
 	 * 登录
 	 * @param loginName 登录账号
 	 * @param password 密码
