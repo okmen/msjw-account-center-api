@@ -52,6 +52,10 @@ public class BindTheVehicleVo implements Serializable{
 	 * 车辆是否有其他人使用
 	 */
 	private String otherPeopleUse;
+	/**
+	 * 车架后4位
+	 */
+	private String behindTheFrame4Digits;
 	
 	public String getNumberPlateNumber() {
 		return numberPlateNumber;
@@ -113,4 +117,11 @@ public class BindTheVehicleVo implements Serializable{
 	public void setOtherPeopleUse(String otherPeopleUse) {
 		this.otherPeopleUse = otherPeopleUse;
 	}
+	public String getBehindTheFrame4Digits() {
+		return behindTheFrame4Digits;
+	}
+	public void setBehindTheFrame4Digits(String behindTheFrame4Digits) {
+		this.behindTheFrame4Digits = behindTheFrame4Digits;
+	}
+	
 }

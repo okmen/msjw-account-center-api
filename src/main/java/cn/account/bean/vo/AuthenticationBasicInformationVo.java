@@ -36,6 +36,15 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 	 * 我的头像
 	 */
 	private String myAvatar;
+	/**
+	 * 车架后4位
+	 */
+	private String behindTheFrame4Digits;
+	/**
+	 * 号牌种类
+	 */
+	private String plateType;
+	
 	public String getTrueName() {
 		return trueName;
 	}
@@ -66,8 +75,18 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 	public void setMyAvatar(String myAvatar) {
 		this.myAvatar = myAvatar;
 	}
-
-	
+	public String getBehindTheFrame4Digits() {
+		return behindTheFrame4Digits;
+	}
+	public void setBehindTheFrame4Digits(String behindTheFrame4Digits) {
+		this.behindTheFrame4Digits = behindTheFrame4Digits;
+	}
+	public String getPlateType() {
+		return plateType;
+	}
+	public void setPlateType(String plateType) {
+		this.plateType = plateType;
+	}
 	public static void main(String[] args) {
 		List<InformationSheetVo> informationSheetVos = new ArrayList<InformationSheetVo>();
 		InformationSheetVo informationSheetVo1 = new InformationSheetVo();
