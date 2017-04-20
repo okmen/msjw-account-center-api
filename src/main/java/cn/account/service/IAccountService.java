@@ -65,7 +65,7 @@ public interface IAccountService {
 	 * @return
 	 * @throws Exception
 	 */
-	//public AuthenticationBasicInformationVo getAuthenticationBasicInformation(String identityCard,String sourceOfCertification,String mobilephone) throws Exception;
+	public AuthenticationBasicInformationVo getAuthenticationBasicInformation(String identityCard,String sourceOfCertification,String mobilephone) throws Exception;
 	/**
 	 * 登录
 	 * @param loginName 登录账号
