@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 我的业务切换查询Vo
  * @author Mbenben
@@ -102,5 +104,8 @@ public class MyBusinessVo implements Serializable{
 	public void setDetailedBusiness(Integer detailedBusiness) {
 		this.detailedBusiness = detailedBusiness;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

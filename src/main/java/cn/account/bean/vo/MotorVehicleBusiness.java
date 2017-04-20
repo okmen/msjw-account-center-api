@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 机动车业务
  * @author Mbenben
@@ -111,6 +113,9 @@ public class MotorVehicleBusiness implements Serializable{
 	public void setZSXXDZ(String zSXXDZ) {
 		ZSXXDZ = zSXXDZ;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 	
 }

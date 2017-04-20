@@ -3,6 +3,8 @@ package cn.account.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 import cn.sdk.bean.BaseBean;
 
 /**
@@ -53,5 +55,8 @@ public class Documentation extends BaseBean implements Serializable{
 	public void setAddDate(Date addDate) {
 		this.addDate = addDate;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

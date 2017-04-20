@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 电子行驶证
  * @author Mbenben
@@ -54,5 +56,8 @@ public class DrivingLicenseVo implements Serializable{
 	public void setElectronicDrivingLicenseQRCode(String electronicDrivingLicenseQRCode) {
 		this.electronicDrivingLicenseQRCode = electronicDrivingLicenseQRCode;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

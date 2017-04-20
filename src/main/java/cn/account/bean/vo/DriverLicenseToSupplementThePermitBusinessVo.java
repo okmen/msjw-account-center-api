@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 驾驶证业务查询
  * @author Mbenben
@@ -124,6 +126,9 @@ public class DriverLicenseToSupplementThePermitBusinessVo implements Serializabl
 	public void setZHCLZT(String zHCLZT) {
 		ZHCLZT = zHCLZT;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 	
 }

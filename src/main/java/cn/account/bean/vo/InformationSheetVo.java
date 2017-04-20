@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 信息单Vo
  * @author Mbenben
@@ -102,4 +104,8 @@ public class InformationSheetVo implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

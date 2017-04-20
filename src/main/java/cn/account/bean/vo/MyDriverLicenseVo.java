@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 import cn.sdk.bean.BaseBean;
 
 /**
@@ -75,5 +77,8 @@ public class MyDriverLicenseVo extends BaseBean implements Serializable{
 	public void setIsReceive(Integer isReceive) {
 		this.isReceive = isReceive;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

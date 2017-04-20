@@ -1,4 +1,7 @@
 package cn.account.bean.vo.queryclassservice;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 用户中心-查询类服务-业务办理进度查询-机动车业务
  * @author Mbenben
@@ -95,5 +98,8 @@ public class MotorVehicleBusinessVo {
 	public void setHandleTheState(String handleTheState) {
 		this.handleTheState = handleTheState;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

@@ -1,4 +1,7 @@
 package cn.account.bean.vo;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 身份认证审核结果查询
  * @author Mbenben
@@ -35,5 +38,8 @@ public class IdentificationOfAuditResultsVo {
 	public void setTBYY(String tBYY) {
 		TBYY = tBYY;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

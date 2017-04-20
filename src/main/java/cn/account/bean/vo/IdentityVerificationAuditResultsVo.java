@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 身份认证审核结果
  * @author Mbenben
@@ -52,7 +54,10 @@ public class IdentityVerificationAuditResultsVo  implements Serializable{
 	public void setAuthenticationType(Integer authenticationType) {
 		this.authenticationType = authenticationType;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 	
 	
 }

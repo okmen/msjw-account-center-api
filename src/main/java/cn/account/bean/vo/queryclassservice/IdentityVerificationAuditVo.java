@@ -1,4 +1,7 @@
 package cn.account.bean.vo.queryclassservice;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 身份认证审核
  * @author Mbenben
@@ -56,5 +59,8 @@ public class IdentityVerificationAuditVo {
 	public void setBusinessType(Integer businessType) {
 		this.businessType = businessType;
 	}
-
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

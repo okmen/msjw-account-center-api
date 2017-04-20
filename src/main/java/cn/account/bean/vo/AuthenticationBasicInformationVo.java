@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 import com.alibaba.fastjson.JSON;
 
 /**
@@ -87,6 +89,10 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 	public void setPlateType(String plateType) {
 		this.plateType = plateType;
 	}
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 	public static void main(String[] args) {
 		List<InformationSheetVo> informationSheetVos = new ArrayList<InformationSheetVo>();
 		InformationSheetVo informationSheetVo1 = new InformationSheetVo();

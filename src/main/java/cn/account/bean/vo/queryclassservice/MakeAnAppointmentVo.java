@@ -1,4 +1,7 @@
 package cn.account.bean.vo.queryclassservice;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 预约查询
  * @author Mbenben
@@ -106,5 +109,8 @@ public class MakeAnAppointmentVo {
 	public void setReservationStatus(String reservationStatus) {
 		this.reservationStatus = reservationStatus;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

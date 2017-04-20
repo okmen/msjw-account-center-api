@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 import java.util.List;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 /**
  * 机动车信息单
  * @author Mbenben
@@ -72,5 +74,8 @@ public class MotorVehicleInformationSheetVo implements Serializable{
 	public void setPlateTypes(List<String> plateTypes) {
 		this.plateTypes = plateTypes;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }

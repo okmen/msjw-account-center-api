@@ -1,4 +1,7 @@
 package cn.account.bean.vo;
+
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 驾驶证信息单
  * @author Mbenben
@@ -36,7 +39,10 @@ public class DriverLicenseInformationSheetVo {
 	public void setMobilephone(String mobilephone) {
 		this.mobilephone = mobilephone;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 	
 	
 }

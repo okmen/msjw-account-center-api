@@ -2,6 +2,8 @@ package cn.account.bean.vo;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 已绑定车辆
  * @author Mbenben
@@ -123,5 +125,8 @@ public class BindTheVehicleVo implements Serializable{
 	public void setBehindTheFrame4Digits(String behindTheFrame4Digits) {
 		this.behindTheFrame4Digits = behindTheFrame4Digits;
 	}
-	
+	@Override 
+    public String toString() { 
+            return ReflectionToStringBuilder.toString(this); 
+    }
 }
