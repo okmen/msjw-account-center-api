@@ -4,50 +4,39 @@ import java.io.Serializable;
 
 public class ReadilyShootVo implements Serializable{
 	
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * 申诉人姓名
-	 */
-	private String whistleblower;
+	
+	
 	
 	/**
-	 * 申诉人联系电话
-	 */
-	private String mobilephone;
-	
-	/**
-	 * 申诉人联系地址
-	 */
-	private String linkAddress;
-	
-	/**
-	 * 申诉车号
+	 * 车牌号码
 	 */
 	private String licensePlateNumber;
 	
 	/**
-	 * 申诉内容
+	 * 车牌种类
 	 */
-	private String situationStatement;
+	private String licensePlateType;
+	
 	
 	/**
-	 * 交款编号
+	 * 违法行为1
 	 */
-	private String paymentNumber;
+	private String illegalActivitieOne;
 	
 	/**
-	 * 申诉类型 
+	 * 违法行为2
 	 */
-	private String applyType;
+	private String illegalActivitieTwo;
 	
 	/**
-	 * 违法时间
+	 * 违法行为3
 	 */
-	private String illegalTime;
+	private String illegalActivitieThree;
 	
 	/**
 	 * 违法地点
@@ -55,53 +44,122 @@ public class ReadilyShootVo implements Serializable{
 	private String illegalSections;
 	
 	/**
-	 * 执法单位
+	 * 违法时间
 	 */
-	private String enforcementDepartment;
+	private String illegalTime;
+	
 	
 	/**
-	 *  申述来源
+	 * 录入人
+	 */
+	private String inputMan;
+	
+	/**
+	 * 录入人姓名
+	 */
+	private String inputManName;
+	
+	
+	/**
+	 * 申诉人联系电话
+	 */
+	private String inputManPhone;
+		
+	/**
+	 * 接口调用账户
+	 */
+	private String callAccount;
+	
+	/**
+	 * 举报图片1
+	 */
+	private String reportImgOne;
+	
+	/**
+	 * 举报图片2
+	 */
+	private String reportImgTwo;
+	
+	/**
+	 * 举报图片3
+	 */
+	private String reportImgThree;
+	
+	/**
+	 * 举报图片4
+	 */
+	private String reportImgFour;
+	
+	/**
+	 * 举报图片5
+	 */
+	private String reportImgFive;
+	
+	/**
+	 * 举报视频url
+	 */
+	private String reportVideoPath;
+
+	/**
+	 *  举报来源
 	 */
 	private String userSource;
 	
-	/**
-	 * 证据材料图片
-	 */
-	private String images;
 	
 	/**
-	 * 星级用户登录身份证明号码
+	 * 身份证明号码
 	 */
 	private String userIdCard;
 	
 	/**
-	 * 星级用户登陆账号 
+	 * 微信openid
+	 */	
+	private String openId;
+	
+	/**
+	 * 支付宝id
 	 */
-	private String userNumber;
+	private String unionId;
+	
+	/**
+	 *  是否实名 0  -非实名  1-实名认证过
+	 */
+	private int isRealName;
+	
+	/**
+	 * 车载公司对应用户ID.规则：车载公司账号+本公司用户唯一编号
+	 */
+	private  String carCompanyId;
 
-	public String getWhistleblower() {
-		return whistleblower;
-	}
-
-	public void setWhistleblower(String whistleblower) {
-		this.whistleblower = whistleblower;
-	}
-
-	public String getMobilephone() {
-		return mobilephone;
-	}
-
-	public void setMobilephone(String mobilephone) {
-		this.mobilephone = mobilephone;
-	}
-
-	public String getLinkAddress() {
-		return linkAddress;
-	}
-
-	public void setLinkAddress(String linkAddress) {
-		this.linkAddress = linkAddress;
-	}
+	/**
+	 * 车载设备id
+	 */
+	private  String carEquipmentId;
+	
+	/**
+	 * 银行卡号
+	 */
+	private String bankCardNumber;
+		
+	/**
+	 * 银行开户行代码
+	 */
+	private String bankCode;
+	
+	/**
+	 * 卡户银行
+	 */
+	private String bankName;
+	
+	/**
+	 * 领奖方式
+	 */
+	private String AcceptWay;
+	
+	/**
+	 * 备注
+	 */
+	private String note;
 
 	public String getLicensePlateNumber() {
 		return licensePlateNumber;
@@ -111,36 +169,36 @@ public class ReadilyShootVo implements Serializable{
 		this.licensePlateNumber = licensePlateNumber;
 	}
 
-	public String getSituationStatement() {
-		return situationStatement;
+	public String getLicensePlateType() {
+		return licensePlateType;
 	}
 
-	public void setSituationStatement(String situationStatement) {
-		this.situationStatement = situationStatement;
+	public void setLicensePlateType(String licensePlateType) {
+		this.licensePlateType = licensePlateType;
 	}
 
-	public String getPaymentNumber() {
-		return paymentNumber;
+	public String getIllegalActivitieOne() {
+		return illegalActivitieOne;
 	}
 
-	public void setPaymentNumber(String paymentNumber) {
-		this.paymentNumber = paymentNumber;
+	public void setIllegalActivitieOne(String illegalActivitieOne) {
+		this.illegalActivitieOne = illegalActivitieOne;
 	}
 
-	public String getApplyType() {
-		return applyType;
+	public String getIllegalActivitieTwo() {
+		return illegalActivitieTwo;
 	}
 
-	public void setApplyType(String applyType) {
-		this.applyType = applyType;
+	public void setIllegalActivitieTwo(String illegalActivitieTwo) {
+		this.illegalActivitieTwo = illegalActivitieTwo;
 	}
 
-	public String getIllegalTime() {
-		return illegalTime;
+	public String getIllegalActivitieThree() {
+		return illegalActivitieThree;
 	}
 
-	public void setIllegalTime(String illegalTime) {
-		this.illegalTime = illegalTime;
+	public void setIllegalActivitieThree(String illegalActivitieThree) {
+		this.illegalActivitieThree = illegalActivitieThree;
 	}
 
 	public String getIllegalSections() {
@@ -151,12 +209,92 @@ public class ReadilyShootVo implements Serializable{
 		this.illegalSections = illegalSections;
 	}
 
-	public String getEnforcementDepartment() {
-		return enforcementDepartment;
+	public String getIllegalTime() {
+		return illegalTime;
 	}
 
-	public void setEnforcementDepartment(String enforcementDepartment) {
-		this.enforcementDepartment = enforcementDepartment;
+	public void setIllegalTime(String illegalTime) {
+		this.illegalTime = illegalTime;
+	}
+
+	public String getInputMan() {
+		return inputMan;
+	}
+
+	public void setInputMan(String inputMan) {
+		this.inputMan = inputMan;
+	}
+
+	public String getInputManName() {
+		return inputManName;
+	}
+
+	public void setInputManName(String inputManName) {
+		this.inputManName = inputManName;
+	}
+
+	public String getInputManPhone() {
+		return inputManPhone;
+	}
+
+	public void setInputManPhone(String inputManPhone) {
+		this.inputManPhone = inputManPhone;
+	}
+
+	public String getCallAccount() {
+		return callAccount;
+	}
+
+	public void setCallAccount(String callAccount) {
+		this.callAccount = callAccount;
+	}
+
+	public String getReportImgOne() {
+		return reportImgOne;
+	}
+
+	public void setReportImgOne(String reportImgOne) {
+		this.reportImgOne = reportImgOne;
+	}
+
+	public String getReportImgTwo() {
+		return reportImgTwo;
+	}
+
+	public void setReportImgTwo(String reportImgTwo) {
+		this.reportImgTwo = reportImgTwo;
+	}
+
+	public String getReportImgThree() {
+		return reportImgThree;
+	}
+
+	public void setReportImgThree(String reportImgThree) {
+		this.reportImgThree = reportImgThree;
+	}
+
+	public String getReportImgFour() {
+		return reportImgFour;
+	}
+
+	public void setReportImgFour(String reportImgFour) {
+		this.reportImgFour = reportImgFour;
+	}
+
+	public String getReportImgFive() {
+		return reportImgFive;
+	}
+
+	public void setReportImgFive(String reportImgFive) {
+		this.reportImgFive = reportImgFive;
+	}
+
+	public String getReportVideoPath() {
+		return reportVideoPath;
+	}
+
+	public void setReportVideoPath(String reportVideoPath) {
+		this.reportVideoPath = reportVideoPath;
 	}
 
 	public String getUserSource() {
@@ -167,14 +305,6 @@ public class ReadilyShootVo implements Serializable{
 		this.userSource = userSource;
 	}
 
-	public String getImages() {
-		return images;
-	}
-
-	public void setImages(String images) {
-		this.images = images;
-	}
-
 	public String getUserIdCard() {
 		return userIdCard;
 	}
@@ -183,20 +313,109 @@ public class ReadilyShootVo implements Serializable{
 		this.userIdCard = userIdCard;
 	}
 
-	public String getUserNumber() {
-		return userNumber;
+	public String getOpenId() {
+		return openId;
 	}
 
-	public void setUserNumber(String userNumber) {
-		this.userNumber = userNumber;
+	public void setOpenId(String openId) {
+		this.openId = openId;
 	}
 
+	public String getUnionId() {
+		return unionId;
+	}
+
+	public void setUnionId(String unionId) {
+		this.unionId = unionId;
+	}
+
+	public int getIsRealName() {
+		return isRealName;
+	}
+
+	public void setIsRealName(int isRealName) {
+		this.isRealName = isRealName;
+	}
+
+	public String getCarCompanyId() {
+		return carCompanyId;
+	}
+
+	public void setCarCompanyId(String carCompanyId) {
+		this.carCompanyId = carCompanyId;
+	}
+
+	public String getCarEquipmentId() {
+		return carEquipmentId;
+	}
+
+	public void setCarEquipmentId(String carEquipmentId) {
+		this.carEquipmentId = carEquipmentId;
+	}
+
+	public String getBankCardNumber() {
+		return bankCardNumber;
+	}
+
+	public void setBankCardNumber(String bankCardNumber) {
+		this.bankCardNumber = bankCardNumber;
+	}
+
+	public String getBankCode() {
+		return bankCode;
+	}
+
+	public void setBankCode(String bankCode) {
+		this.bankCode = bankCode;
+	}
+
+	public String getBankName() {
+		return bankName;
+	}
+
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+
+	public String getAcceptWay() {
+		return AcceptWay;
+	}
+
+	public void setAcceptWay(String acceptWay) {
+		AcceptWay = acceptWay;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-
+	@Override
+	public String toString() {
+		return "ReadilyShootVo [licensePlateNumber=" + licensePlateNumber + ", licensePlateType=" + licensePlateType
+				+ ", illegalActivitieOne=" + illegalActivitieOne + ", illegalActivitieTwo=" + illegalActivitieTwo
+				+ ", illegalActivitieThree=" + illegalActivitieThree + ", illegalSections=" + illegalSections
+				+ ", illegalTime=" + illegalTime + ", inputMan=" + inputMan + ", inputManName=" + inputManName
+				+ ", inputManPhone=" + inputManPhone + ", callAccount=" + callAccount + ", reportImgOne=" + reportImgOne
+				+ ", reportImgTwo=" + reportImgTwo + ", reportImgThree=" + reportImgThree + ", reportImgFour="
+				+ reportImgFour + ", reportImgFive=" + reportImgFive + ", reportVideoPath=" + reportVideoPath
+				+ ", userSource=" + userSource + ", userIdCard=" + userIdCard + ", openId=" + openId + ", unionId="
+				+ unionId + ", isRealName=" + isRealName + ", carCompanyId=" + carCompanyId + ", carEquipmentId="
+				+ carEquipmentId + ", bankCardNumber=" + bankCardNumber + ", bankCode=" + bankCode + ", bankName="
+				+ bankName + ", AcceptWay=" + AcceptWay + ", note=" + note + "]";
+	}
+	
+	
+	
+	
+	
 	
 
 }
