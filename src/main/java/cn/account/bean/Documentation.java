@@ -30,6 +30,10 @@ public class Documentation extends BaseBean implements Serializable{
 	 * 创建日期
 	 */
 	private Date addDate;
+	/**
+	 * 文档标题
+	 */
+	private String title;
 	
 	public Long getId() {
 		return id;
@@ -54,6 +58,13 @@ public class Documentation extends BaseBean implements Serializable{
 	}
 	public void setAddDate(Date addDate) {
 		this.addDate = addDate;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	@Override 
     public String toString() { 
