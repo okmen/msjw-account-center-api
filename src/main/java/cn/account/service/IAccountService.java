@@ -31,6 +31,16 @@ import cn.account.bean.vo.queryclassservice.MotorVehicleBusinessVo;
  */
 public interface IAccountService {
 	/**
+	 * 重置密码
+	 * @param idCard 身份证
+	 * @param userName 用户名
+	 * @param mobile 手机号
+	 * @param sourceOfCertification 认证来源
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, String> resetPwd(String idCard,String userName,String mobile,String sourceOfCertification)throws Exception;
+	/**
 	 * 根据须知文档key查询
 	 * @param noticeKey
 	 * @return Documentation
