@@ -9,6 +9,7 @@ public class ReadilyShootVo implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	
 	
 	
@@ -59,6 +60,7 @@ public class ReadilyShootVo implements Serializable{
 	 */
 	private String inputManName;
 	
+
 	
 	/**
 	 * 申诉人联系电话
@@ -414,8 +416,9 @@ public class ReadilyShootVo implements Serializable{
 	
 	
 	
+
 	
-	
+
 	
 
 }

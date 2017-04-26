@@ -3,8 +3,8 @@ package cn.account.bean.vo;
 import java.io.Serializable;
 
 
-public class BindCarVo implements Serializable{
 
+public class BindCarVo implements Serializable{
 
 	/**
 	 * 

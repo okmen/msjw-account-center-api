@@ -3,6 +3,7 @@ package cn.account.bean.vo;
 import java.io.Serializable;
 
 
+
 /**
  * 用户认证信息
  * @author liuminkang
@@ -10,7 +11,6 @@ import java.io.Serializable;
  */
 public class RegisterVo implements Serializable {
 
-	
 
 	/**
 	 * 

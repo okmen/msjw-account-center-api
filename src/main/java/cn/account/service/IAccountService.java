@@ -480,6 +480,7 @@ public interface IAccountService {
      */
 	JSONObject isPedestrianNotDriver(RegisterVo registerVo) throws Exception;
 
+
 	/**
 	 * 
 	 * @Title: getPositioningAddress 
@@ -492,6 +493,7 @@ public interface IAccountService {
 	 * @date 2017年4月20日 下午2:05:30
 	 */
 	JSONObject getPositioningAddress(String keyword)throws Exception;
+
     
     
 	
