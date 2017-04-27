@@ -402,18 +402,18 @@ public class ReadilyShootVo implements Serializable{
 	@Override
 	public String toString() {
 		return "ReadilyShootVo [licensePlateNumber=" + licensePlateNumber + ", licensePlateType=" + licensePlateType
-				+ ", illegalActivitieOne=" + illegalActivitieOne + ", illegalActivitieTwo=" + illegalActivitieTwo
-				+ ", illegalActivitieThree=" + illegalActivitieThree + ", illegalSections=" + illegalSections
-				+ ", illegalTime=" + illegalTime + ", inputMan=" + inputMan + ", inputManName=" + inputManName
-				+ ", inputManPhone=" + inputManPhone + ", callAccount=" + callAccount + ", reportImgOne=" + reportImgOne
-				+ ", reportImgTwo=" + reportImgTwo + ", reportImgThree=" + reportImgThree + ", reportImgFour="
-				+ reportImgFour + ", reportImgFive=" + reportImgFive + ", reportVideoPath=" + reportVideoPath
-				+ ", userSource=" + userSource + ", userIdCard=" + userIdCard + ", openId=" + openId + ", unionId="
-				+ unionId + ", isRealName=" + isRealName + ", carCompanyId=" + carCompanyId + ", carEquipmentId="
-				+ carEquipmentId + ", bankCardNumber=" + bankCardNumber + ", bankCode=" + bankCode + ", bankName="
-				+ bankName + ", AcceptWay=" + AcceptWay + ", note=" + note + "]";
+				+ ", illegalSections=" + illegalSections + ", illegalTime=" + illegalTime + ", inputMan=" + inputMan
+				+ ", inputManName=" + inputManName + ", inputManPhone=" + inputManPhone + ", callAccount=" + callAccount
+				+ ", reportImgOne=" + reportImgOne + ", reportImgTwo=" + reportImgTwo + ", reportImgThree="
+				+ reportImgThree + ", reportImgFour=" + reportImgFour + ", reportImgFive=" + reportImgFive
+				+ ", reportVideoPath=" + reportVideoPath + ", userSource=" + userSource + ", userIdCard=" + userIdCard
+				+ ", openId=" + openId + ", unionId=" + unionId + ", isRealName=" + isRealName + ", carCompanyId="
+				+ carCompanyId + ", carEquipmentId=" + carEquipmentId + ", bankCardNumber=" + bankCardNumber
+				+ ", bankCode=" + bankCode + ", bankName=" + bankName + ", AcceptWay=" + AcceptWay + ", note=" + note
+				+ "]";
 	}
-	
+
+
 	
 	
 

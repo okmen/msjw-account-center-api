@@ -10,15 +10,16 @@ import java.io.Serializable;
  */
 public class UserBasicVo implements Serializable {
 
+	
+
+
 	@Override
 	public String toString() {
 		return "UserBasicVo [identityCard=" + identityCard + ", nickname=" + nickname + ", mailingAddress="
-				+ mailingAddress + ", idCardImgPositive=" + idCardImgPositive + ", idCardImgNegative="
-				+ idCardImgNegative + ", IdCardImgHandHeld=" + IdCardImgHandHeld + ", IdCardValidityDate="
-				+ IdCardValidityDate + ", userSource=" + userSource + ", oldMobile=" + oldMobile + ", newMobile="
-				+ newMobile + ", oldPwd=" + oldPwd + ", newPwd=" + newPwd + "]";
+				+ mailingAddress + ", IdCardValidityDate=" + IdCardValidityDate + ", userSource=" + userSource
+				+ ", oldMobile=" + oldMobile + ", newMobile=" + newMobile + ", oldPwd=" + oldPwd + ", newPwd=" + newPwd
+				+ "]";
 	}
-
 
 	/**
 	 * 

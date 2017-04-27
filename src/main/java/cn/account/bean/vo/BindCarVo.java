@@ -184,4 +184,16 @@ public class BindCarVo implements Serializable{
 		return serialVersionUID;
 	}
 
+	@Override
+	public String toString() {
+		return "BindCarVo [userIdCard=" + userIdCard + ", userSource=" + userSource + ", licensePlateNumber="
+				+ licensePlateNumber + ", licensePlateType=" + licensePlateType + ", provinceAbbreviation="
+				+ provinceAbbreviation + ", frameNumber=" + frameNumber + ", ownerName=" + ownerName + ", ownerIdCard="
+				+ ownerIdCard + ", bindType=" + bindType + ", inputIP=" + inputIP + ", certifiedSource="
+				+ certifiedSource + "]";
+	}
+	
+	
+	
+
 }

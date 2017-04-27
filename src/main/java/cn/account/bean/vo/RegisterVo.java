@@ -267,6 +267,17 @@ public class RegisterVo implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	@Override
+	public String toString() {
+		return "RegisterVo [userIdCard=" + userIdCard + ", mobilephone=" + mobilephone + ", linkAddress=" + linkAddress
+				+ ", licensePlateNumber=" + licensePlateNumber + ", licensePlateType=" + licensePlateType
+				+ ", ownerName=" + ownerName + ", ownerIdName=" + ownerIdName + ", ownerIdCard=" + ownerIdCard
+				+ ", ownerMobilephone=" + ownerMobilephone + ", certifiedType=" + certifiedType + ", certifiedSource="
+				+ certifiedSource + ", certifiedRole=" + certifiedRole + ", callAccount=" + callAccount
+				+ ", driverLicenseIssuedAddress=" + driverLicenseIssuedAddress + ", provinceAbbreviation="
+				+ provinceAbbreviation + "]";
+	}
 	
 	
 	
