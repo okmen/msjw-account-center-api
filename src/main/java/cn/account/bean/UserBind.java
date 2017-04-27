@@ -3,6 +3,8 @@ package cn.account.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 /**
  * 用户绑定信息
  * @author liuminkang
@@ -81,7 +83,8 @@ public class UserBind implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
+	@Override 
+    public String toString() { 
+       return ReflectionToStringBuilder.toString(this); 
+    }
 }
