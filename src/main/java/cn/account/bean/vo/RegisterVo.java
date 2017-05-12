@@ -111,6 +111,10 @@ public class RegisterVo implements Serializable {
 	 * 车主手持身份证
 	 */
 	private String ownerIdCardImgHandHeld;
+	/**
+	 * 微信openId
+	 */
+	private String openId;
 
 	public String getUserIdCard() {
 		return userIdCard;
@@ -266,6 +270,14 @@ public class RegisterVo implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+	public String getOpenId() {
+		return openId;
+	}
+
+	public void setOpenId(String openId) {
+		this.openId = openId;
 	}
 
 	@Override

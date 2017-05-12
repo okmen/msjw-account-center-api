@@ -493,8 +493,12 @@ public interface IAccountService {
 	 * @date 2017年4月20日 下午2:05:30
 	 */
 	JSONObject getPositioningAddress(String keyword)throws Exception;
-
+	/**
+	 * 违法行为的选择项目
+	 * @param keyword
+	 * @return
+	 * @throws Exception
+	 */
+	public JSONObject getTheChoiceOfIllegalActivities(String keyword) throws Exception;
     
-    
-	
 }
