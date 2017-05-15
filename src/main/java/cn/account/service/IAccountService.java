@@ -1,11 +1,13 @@
 package cn.account.service;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
 
 import cn.account.bean.Documentation;
+import cn.account.bean.ElectronicPolicyBean;
 import cn.account.bean.UserBind;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
@@ -500,5 +502,21 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public JSONObject getTheChoiceOfIllegalActivities(String keyword) throws Exception;
+	/**
+	 * 电子保单查询
+	 * @param idCard 身份证号
+	 * @param mobileNumber 手机号
+	 * @param licensePlateNumber 车牌号码
+	 * @param licensePlateType 车辆类型
+	 * @param sourceOfCertification 认证来源
+	 * @param url
+	 * @param method
+	 * @param userId
+	 * @param userPwd
+	 * @param key
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, Object> getElectronicPolicy(String idCard,String mobileNumber,String licensePlateNumber,String licensePlateType,String sourceOfCertification) throws Exception;
     
 }
