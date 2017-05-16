@@ -239,7 +239,25 @@ public interface IAccountService {
 	 * @param 0-验证成功，1-验证失败，2-验证码失效
 	 */
 	public int verificatioCode(String mobilephone,String validateCode);
+	/**
+	 * 手机号码在redis是否存在
+	 * @param mobile
+	 * @return
+	 * @throws Exception
+	 */
+	public String isExistMobile(String mobile)throws Exception;
 	
+	/**
+     * 限制一个手机号短信5秒发一次
+     * @param mobilephone
+     */
+    public void sendSmsFreqLimit(String mobilephone);
+    /**
+     * 根据手机号+limit获取
+     * @param mobilephone
+     * @return
+     */
+    public String getSendSmsFreqLimit(String mobilephone);
 //	/**
 //	 * 添加新用户
 //	 * 

@@ -162,6 +162,10 @@ public class ReadilyShootVo implements Serializable{
 	 * 备注
 	 */
 	private String note;
+	/**
+	 * 违法行为1
+	 */
+	private String wfxw1;
 
 	public String getLicensePlateNumber() {
 		return licensePlateNumber;
@@ -397,6 +401,14 @@ public class ReadilyShootVo implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+	public String getWfxw1() {
+		return wfxw1;
+	}
+
+	public void setWfxw1(String wfxw1) {
+		this.wfxw1 = wfxw1;
 	}
 
 	@Override
