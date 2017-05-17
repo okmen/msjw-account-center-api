@@ -454,4 +454,19 @@ public interface IAccountService {
 	 */
 	public Map<String, Object> Reservation(String sourceOfCertification,String mobilephone,String validateCode,String plateNumber,String plateType,String vehicleType,
     		String fourDigitsAfterTheEngine,String time,String date,String address) throws Exception;
+	
+	 /**
+     * id 范围查询
+     * @param startId
+     * @param endId
+     * @return
+     */
+	public List<UserBind> getBetweenAndId(String startId,String endId);
+	/**
+	 * 绑定时间范围查询
+	 * @param startDate
+	 * @param endDate
+	 * @return
+	 */
+	public List<UserBind> getBetweenAndBindDate(String startDate,String endDate);
 }
