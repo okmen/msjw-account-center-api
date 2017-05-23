@@ -8,12 +8,9 @@ import com.alibaba.fastjson.JSONObject;
 
 import cn.account.bean.Documentation;
 import cn.account.bean.ElectronicPolicyBean;
-<<<<<<< Updated upstream
 import cn.account.bean.ReservationBean;
-=======
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
->>>>>>> Stashed changes
 import cn.account.bean.UserBind;
 import cn.account.bean.UserBindAlipay;
 import cn.account.bean.WechatUserInfoBean;
@@ -428,7 +425,7 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public Map<String, Object> getElectronicPolicy(String idCard,String mobileNumber,String licensePlateNumber,String licensePlateType,String sourceOfCertification) throws Exception;
-<<<<<<< Updated upstream
+
     /**
      * 取消预约
      * @param sourceOfCertification 认证来源 微信C 支付宝Z
@@ -478,7 +475,7 @@ public interface IAccountService {
 	 * @return
 	 */
 	public List<UserBind> getBetweenAndBindDate(String startDate,String endDate);
-=======
+
 	
 	/**
 	 * 保存违法举报信息
@@ -494,5 +491,4 @@ public interface IAccountService {
 	 */
 	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password) throws Exception;
 	
->>>>>>> Stashed changes
 }
