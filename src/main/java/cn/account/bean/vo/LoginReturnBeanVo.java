@@ -1,7 +1,9 @@
 package cn.account.bean.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
+import cn.account.bean.Car;
 import cn.sdk.bean.BaseBean;
 
 /**
@@ -18,6 +20,7 @@ public class LoginReturnBeanVo extends BaseBean implements Serializable{
 	 * 认证基本信息
 	 */
 	private AuthenticationBasicInformationVo authenticationBasicInformation;
+	private List<Car> cars;
 	/**
 	 * 身份认证审核结果
 	 */
@@ -33,6 +36,12 @@ public class LoginReturnBeanVo extends BaseBean implements Serializable{
 	}
 	public void setIdentityVerificationAuditResults(IdentityVerificationAuditResultsVo identityVerificationAuditResults) {
 		this.identityVerificationAuditResults = identityVerificationAuditResults;
+	}
+	public List<Car> getCars() {
+		return cars;
+	}
+	public void setCars(List<Car> cars) {
+		this.cars = cars;
 	}
 	
 }
