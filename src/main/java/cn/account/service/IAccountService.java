@@ -97,6 +97,17 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public LoginReturnBeanVo login(String loginName,String password,String sourceOfCertification,String openId,String loginClient) throws Exception;
+	
+	/**
+	 * 登录
+	 * @param alipayLogin 登录账号
+	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
+	 * @param openId 登录的openId 支付宝openId、微信openId
+	 * @return
+	 * @throws Exception
+	 */
+	public LoginReturnBeanVo alipayLogin(String loginName,String sourceOfCertification,String openId) throws Exception;
+	
 	/**
 	 * 获取机动车信息单
 	 * @param identityCard 身份证号
