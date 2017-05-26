@@ -8,7 +8,10 @@ import com.alibaba.fastjson.JSONObject;
 
 import cn.account.bean.Documentation;
 import cn.account.bean.ElectronicPolicyBean;
+<<<<<<< Updated upstream
 import cn.account.bean.ReservationBean;
+=======
+>>>>>>> Stashed changes
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
@@ -426,6 +429,7 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public Map<String, Object> getElectronicPolicy(String idCard,String mobileNumber,String licensePlateNumber,String licensePlateType,String sourceOfCertification) throws Exception;
+<<<<<<< Updated upstream
 
     /**
      * 取消预约
@@ -477,6 +481,8 @@ public interface IAccountService {
 	 */
 	public List<UserBind> getBetweenAndBindDate(String startDate,String endDate);
 
+=======
+>>>>>>> Stashed changes
 	
 	/**
 	 * 保存违法举报信息
@@ -492,10 +498,13 @@ public interface IAccountService {
 	 */
 	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password) throws Exception;
 	
+<<<<<<< Updated upstream
 	
 	/**
 	 * 绑定驾驶证
 	 */
 	public JSONObject bindDriverLicense(BindDriverLicenseVo bindDriverLicenseVo);
 	
+=======
+>>>>>>> Stashed changes
 }
