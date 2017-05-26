@@ -16,6 +16,7 @@ import cn.account.bean.UserBindAlipay;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
+import cn.account.bean.vo.BindDriverLicenseVo;
 import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
@@ -490,5 +491,11 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password) throws Exception;
+	
+	
+	/**
+	 * 绑定驾驶证
+	 */
+	public JSONObject bindDriverLicense(BindDriverLicenseVo bindDriverLicenseVo);
 	
 }
