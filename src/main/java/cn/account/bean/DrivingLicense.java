@@ -7,8 +7,10 @@ import java.io.Serializable;
  *
  */
 public class DrivingLicense implements Serializable{
+	
 	private String numberPlatenumber; //车牌号码
-	private String plateType; //车牌类型
+	private String plateType; //车牌类型 01 02
+	private String plateTypeName; //车牌类型名称
 	private String mobileNumber; //手机号
 	private String sourceOfCertification; //认证来源微信C 支付宝Z
 	
@@ -35,6 +37,18 @@ public class DrivingLicense implements Serializable{
 	}
 	public void setSourceOfCertification(String sourceOfCertification) {
 		this.sourceOfCertification = sourceOfCertification;
+	}
+	public String getPlateTypeName() {
+		return plateTypeName;
+	}
+	public void setPlateTypeName(String plateTypeName) {
+		this.plateTypeName = plateTypeName;
+	}
+	public DrivingLicense() {
+	}
+	public DrivingLicense(String plateType, String plateTypeName) {
+		this.plateType = plateType;
+		this.plateTypeName = plateTypeName;
 	}
 	
 }
