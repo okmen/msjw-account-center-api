@@ -10,6 +10,8 @@ import cn.account.bean.Documentation;
 import cn.account.bean.ElectronicPolicyBean;
 
 import cn.account.bean.ReservationBean;
+
+
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
@@ -449,6 +451,7 @@ public interface IAccountService {
 	public Map<String, Object> getElectronicPolicy(String idCard,String mobileNumber,String licensePlateNumber,String licensePlateType,String sourceOfCertification) throws Exception;
 
 
+
     /**
      * 取消预约
      * @param sourceOfCertification 认证来源 微信C 支付宝Z
@@ -500,6 +503,8 @@ public interface IAccountService {
 	public List<UserBind> getBetweenAndBindDate(String startDate,String endDate);
 
 
+
+
 	
 	/**
 	 * 保存违法举报信息
@@ -515,6 +520,7 @@ public interface IAccountService {
 	 */
 	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password) throws Exception;
 	
+
 
 	
 	/**
@@ -575,5 +581,7 @@ public interface IAccountService {
 	public Map<String, Object> queryScheduleOfMotorVehicleInformationList(String applyType, String identityCard,
 			String sourceOfCertification);
 	
+
+
 
 }
