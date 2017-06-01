@@ -107,6 +107,14 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public LoginReturnBeanVo alipayLogin(String loginName,String sourceOfCertification,String openId) throws Exception;
+	/**
+	 * 
+	 * @param loginName 登录名称
+	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
+	 * @return 登录信息
+	 * @throws Exception
+	 */
+	public LoginReturnBeanVo getLoginInfoByLoginName(String loginName,String sourceOfCertification) throws Exception;
 	
 	/**
 	 * 获取机动车信息单
