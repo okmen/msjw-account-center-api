@@ -36,6 +36,7 @@ import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
 import cn.account.bean.vo.queryclassservice.DriverLicenseBusinessVo;
 import cn.account.bean.vo.queryclassservice.MakeAnAppointmentVo;
 import cn.account.bean.vo.queryclassservice.MotorVehicleBusinessVo;
+import cn.sdk.bean.BaseBean;
 
 /**
  * @author suntao
@@ -143,6 +144,28 @@ public interface IAccountService {
 	 * @return
 	 */
 	public DriverLicenseInformationSheetVo getDriverLicenseInformationSheet(String identityCard);
+	/**
+	 * 提交无车证明申请
+	 * @param applyType 申请类型
+	 * @param applyName 申请人姓名
+	 * @param identityCard 申请人身份证号
+	 * @param applyPhone 申请人联系电话
+	 * @param sourceOfCertification 申请来源
+	 * @return
+	 * @throws Exception 
+	 */
+	public BaseBean addNoneCarCertification(String applyType, String applyName, String identityCard, String applyPhone, String sourceOfCertification) throws Exception;
+	/**
+	 * 提交安全事故信用申请
+	 * @param applyType 申请类型
+	 * @param applyName 申请人姓名
+	 * @param identityCard 申请人身份证号
+	 * @param applyPhone 申请人联系电话
+	 * @param sourceOfCertification 申请来源
+	 * @return
+	 * @throws Exception 
+	 */
+	public BaseBean addSafeAccidentCredit(String applyType, String applyName, String identityCard, String applyPhone, String sourceOfCertification) throws Exception;
 	/**
 	 * 提交 代表驾驶人信息单/无车证明申请/驾驶人安全事故信用表
 	 * @param applyType 申请类型（1代表驾驶人信息单；2代表机动车信息单 3代表无车证明申请；4代表驾驶人安全事故信用表）
