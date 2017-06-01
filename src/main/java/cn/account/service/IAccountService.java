@@ -28,6 +28,7 @@ import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
 import cn.account.bean.vo.ReadilyShootVo;
 import cn.account.bean.vo.RegisterVo;
+import cn.account.bean.vo.ResultOfBIndDriverLicenseVo;
 import cn.account.bean.vo.UserBasicVo;
 import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
 import cn.account.bean.vo.queryclassservice.DriverLicenseBusinessVo;
@@ -520,6 +521,59 @@ public interface IAccountService {
 	 * 绑定驾驶证
 	 */
 	public JSONObject bindDriverLicense(BindDriverLicenseVo bindDriverLicenseVo);
+	
+	/**
+	 * 绑定驾驶证结果查询
+	 * @param identityCard 身份证号
+	 * @param userSource 用户来源
+	 * @return
+	 */
+	public ResultOfBIndDriverLicenseVo queryResultOfBindDriverLicense(String identityCard, String userSource);
+	
+	/**
+	 * 提交驾驶证信息单
+	  *@param applyType 申请类型（1代表驾驶人信息单；2代表机动车信息单 3代表无车证明申请；4代表驾驶人安全事故信用表）
+	 * @param userName 申请人姓名（必须是星级用户姓名）
+	 * @param idnetityCard 申请人身份证号码（必须是星级用户身份证号码）
+	 * @param mobilephone 申请人联系电话（必须是星级用户联系电话）
+	 * @param sourceOfCertification 申请来源（APP 传A，微信传C，支付宝传Z）
+	*/
+	public Map<String, String> submitApplicationForDriverInformation(String applyType, String applyName,
+			String identityCard, String applyPhone, String sourceOfCertification);
+	
+	
+	/**
+		 * 提交机动车信息单打印申请
+		  *@param applyType 申请类型（1代表驾驶人信息单；2代表机动车信息单 3代表无车证明申请；4代表驾驶人安全事故信用表）
+		 * @param userName 申请人姓名（必须是星级用户姓名）
+		 * @param idnetityCard 申请人身份证号码（必须是星级用户身份证号码）
+		 * @param mobilephone 申请人联系电话（必须是星级用户联系电话）
+		 * @param numberPlateNumber 号牌号码 
+	     * @param plateType 号牌种类 例如 02-蓝牌
+	     * @param sourceOfCertification 申请来源（APP 传A，微信传C，支付宝传Z）
+	     * */
+	public Map<String, String> submitApplicationForMotorVehicleInformation(String applyType, String applyName,
+			String identityCard, String applyPhone, String licensePlateNumber,
+			String plateType, String sourceOfCertification);
+	
+	
+	/**
+	 * 查询驾驶人信息单
+	 * @param identityCard 身份证
+	 * @param sourceOfCertification 认证来源
+	 * @param applyType 
+	 */
+	public Map<String, Object> queryScheduleOfDriverInformationList(String applyType, String identityCard,
+			String sourceOfCertification);
+	
+	/**
+	 * 查询机动车信息单
+	 * @param identityCard 身份证
+	 * @param sourceOfCertification 认证来源
+	 * @param applyType 
+	 */
+	public Map<String, Object> queryScheduleOfMotorVehicleInformationList(String applyType, String identityCard,
+			String sourceOfCertification);
 	
 
 }
