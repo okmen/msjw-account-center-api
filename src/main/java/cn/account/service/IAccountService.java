@@ -21,7 +21,11 @@ import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
 import cn.account.bean.vo.BindDriverLicenseVo;
 import cn.account.bean.vo.BindTheVehicleVo;
+import cn.account.bean.vo.DriverChangeContactVo;
+import cn.account.bean.vo.DriverLicenseAnnualVerificationVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
+import cn.account.bean.vo.DriverLicenseIntoVo;
+import cn.account.bean.vo.DriverLicenseVoluntaryDemotionVo;
 import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
@@ -30,7 +34,10 @@ import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
 import cn.account.bean.vo.ReadilyShootVo;
 import cn.account.bean.vo.RegisterVo;
+import cn.account.bean.vo.RenewalDriverLicenseVo;
+import cn.account.bean.vo.RepairOrReplaceDriverLicenseVo;
 import cn.account.bean.vo.ResultOfBIndDriverLicenseVo;
+import cn.account.bean.vo.UnbindVehicleVo;
 import cn.account.bean.vo.UserBasicVo;
 import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
 import cn.account.bean.vo.queryclassservice.DriverLicenseBusinessVo;
@@ -603,6 +610,67 @@ public interface IAccountService {
 	 */
 	public Map<String, Object> queryScheduleOfMotorVehicleInformationList(String applyType, String identityCard,
 			String sourceOfCertification);
+	
+	/**
+	 * 驾驶证年审
+	 * @param driverLicenseAnnualVerificationVo
+	 * @return
+	 */
+	
+	public Map<String, String> driverLicenseAnnualVerification(
+			DriverLicenseAnnualVerificationVo driverLicenseAnnualVerificationVo);
+	
+	
+	/**
+	 * 驾驶证延期换证
+	 * @param renewalDriverLicenseVo
+	 * @return
+	 */
+	public Map<String, String> renewalDriverLicense(RenewalDriverLicenseVo renewalDriverLicenseVo);
+	
+	
+	/**
+	 * 驾驶证转入
+	 * @param driverLicenseIntoVo
+	 * @return
+	 */
+	public Map<String, String> driverLicenseInto(DriverLicenseIntoVo driverLicenseIntoVo);
+	
+	/**
+	 * 驾驶证自愿降级
+	 * @param driverLicenseVoluntaryDemotionVo
+	 * @return
+	 */
+	public Map<String, String> driverLicenseVoluntaryDemotion(
+			DriverLicenseVoluntaryDemotionVo driverLicenseVoluntaryDemotionVo);
+	
+	
+	
+	/**
+	 * 驾驶人联系方式变更
+	 * @param driverChangeContactVo
+	 * @return
+	 */
+	public Map<String, String> driverChangeContact(DriverChangeContactVo driverChangeContactVo);
+	/**
+	 * 驾驶证补证
+	 * @param repairOrReplaceDriverLicenseVo
+	 * @return
+	 */
+	public Map<String, String> repairDriverLicense(RepairOrReplaceDriverLicenseVo repairOrReplaceDriverLicenseVo);
+	/**
+	 * 驾驶证换证
+	 * @param repairOrReplaceDriverLicenseVo
+	 * @return
+	 */
+	public Map<String, String> replaceDriverLicense(RepairOrReplaceDriverLicenseVo repairOrReplaceDriverLicenseVo);
+	
+	/**
+	 * 车辆解绑
+	 * @param unbindVehicleVo
+	 * @return
+	 */
+	public Map<String, String> unbindVehicle(UnbindVehicleVo unbindVehicleVo);
 	
 
 
