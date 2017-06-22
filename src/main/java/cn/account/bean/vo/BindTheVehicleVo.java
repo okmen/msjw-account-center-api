@@ -1,6 +1,7 @@
 package cn.account.bean.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
@@ -14,6 +15,14 @@ public class BindTheVehicleVo implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private List<BindTheOtherDriversUseMyCarVo> list ;
+	
+	public List<BindTheOtherDriversUseMyCarVo> getList() {
+		return list;
+	}
+	public void setList(List<BindTheOtherDriversUseMyCarVo> list) {
+		this.list = list;
+	}
 	/**
 	 * 号牌号码
 	 */

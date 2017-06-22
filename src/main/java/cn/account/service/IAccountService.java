@@ -550,15 +550,16 @@ public interface IAccountService {
 	/**
 	 * 绑定驾驶证
 	 */
-	public JSONObject bindDriverLicense(BindDriverLicenseVo bindDriverLicenseVo);
+	public JSONObject bindDriverLicense(BindDriverLicenseVo bindDriverLicenseVo) throws Exception;
 	
 	/**
 	 * 绑定驾驶证结果查询
 	 * @param identityCard 身份证号
 	 * @param userSource 用户来源
 	 * @return
+	 * @throws Exception 
 	 */
-	public ResultOfBIndDriverLicenseVo queryResultOfBindDriverLicense(String identityCard, String userSource);
+	public ResultOfBIndDriverLicenseVo queryResultOfBindDriverLicense(String identityCard, String userSource) throws Exception;
 	
 	/**
 	 * 提交驾驶证信息单
@@ -569,7 +570,7 @@ public interface IAccountService {
 	 * @param sourceOfCertification 申请来源（APP 传A，微信传C，支付宝传Z）
 	*/
 	public Map<String, String> submitApplicationForDriverInformation(String applyType, String applyName,
-			String identityCard, String applyPhone, String sourceOfCertification);
+			String identityCard, String applyPhone, String sourceOfCertification) throws Exception;
 	
 	
 	/**
@@ -584,7 +585,7 @@ public interface IAccountService {
 	     * */
 	public Map<String, String> submitApplicationForMotorVehicleInformation(String applyType, String applyName,
 			String identityCard, String applyPhone, String licensePlateNumber,
-			String plateType, String sourceOfCertification);
+			String plateType, String sourceOfCertification) throws Exception;
 	
 	
 	/**
@@ -594,7 +595,7 @@ public interface IAccountService {
 	 * @param applyType 
 	 */
 	public Map<String, Object> queryScheduleOfDriverInformationList(String applyType, String identityCard,
-			String sourceOfCertification);
+			String sourceOfCertification) throws Exception;
 	
 	/**
 	 * 查询机动车信息单
@@ -603,7 +604,7 @@ public interface IAccountService {
 	 * @param applyType 
 	 */
 	public Map<String, Object> queryScheduleOfMotorVehicleInformationList(String applyType, String identityCard,
-			String sourceOfCertification);
+			String sourceOfCertification) throws Exception;
 	
 	
 	/**
@@ -611,7 +612,31 @@ public interface IAccountService {
 	 * @param unbindVehicleVo
 	 * @return
 	 */
-	public Map<String, String> unbindVehicle(UnbindVehicleVo unbindVehicleVo);
+	public Map<String, String> unbindVehicle(UnbindVehicleVo unbindVehicleVo) throws Exception;
+	
+	/**
+	 * 车主查询本人车辆绑定的其他驾驶人
+	 * @param identityCard
+	 * @param numberPlateNumber
+	 * @param plateType
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception 
+	 */
+	public Map<String, Object> getBindTheOtherDriversUseMyCar(String identityCard, String numberPlateNumber,
+			String plateType, String sourceOfCertification) throws Exception;
+	/**
+	 * 路况查询
+	 * @param sourceOfCertification
+	 * @return
+	 */
+	public Map<String, Object> trafficQuery(String sourceOfCertification) throws Exception;
+	/**
+	 * 单条路况查询
+	 * @param sourceOfCertification
+	 * @return
+	 */
+	public Map<String, String> detailsTrafficQuery(String zjz, String sourceOfCertification)throws Exception;
 	
 
 
