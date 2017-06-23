@@ -31,6 +31,7 @@ import cn.account.bean.vo.MyDriverLicenseVo;
 import cn.account.bean.vo.ReadilyShootVo;
 import cn.account.bean.vo.RegisterVo;
 import cn.account.bean.vo.ResultOfBIndDriverLicenseVo;
+import cn.account.bean.vo.UnbindTheOtherDriverUseMyCarVo;
 import cn.account.bean.vo.UnbindVehicleVo;
 import cn.account.bean.vo.UserBasicVo;
 import cn.account.bean.vo.queryclassservice.CertificationProgressQueryVo;
@@ -613,6 +614,13 @@ public interface IAccountService {
 	 * @return
 	 */
 	public Map<String, String> unbindVehicle(UnbindVehicleVo unbindVehicleVo) throws Exception;
+	
+	/**
+	 * 车主解绑车辆其他驾驶人
+	 * @param unbindVehicleVo
+	 * @return
+	 */
+	public Map<String, String> unbindTheOtherDriverUseMyCar(UnbindTheOtherDriverUseMyCarVo unbindTheOtherDriverUseMyCarVo) throws Exception;
 	
 	/**
 	 * 车主查询本人车辆绑定的其他驾驶人
