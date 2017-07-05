@@ -13,6 +13,9 @@ public class Car implements Serializable{
 	private String plateType; //号牌类型
 	private String mobilephone; //手机号
 	private Integer isMySelf; // 是否本人 0-是、1-否
+	private String identityCard; //身份证
+	private String name; //用户名
+	
 	
 	public String getBehindTheFrame4Digits() {
 		return behindTheFrame4Digits;
@@ -43,6 +46,18 @@ public class Car implements Serializable{
 	}
 	public void setIsMySelf(Integer isMySelf) {
 		this.isMySelf = isMySelf;
+	}
+	public String getIdentityCard() {
+		return identityCard;
+	}
+	public void setIdentityCard(String identityCard) {
+		this.identityCard = identityCard;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
