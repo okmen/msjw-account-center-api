@@ -29,6 +29,7 @@ import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
 import cn.account.bean.vo.ReadilyShootVo;
+import cn.account.bean.vo.ReauthenticationVo;
 import cn.account.bean.vo.RegisterVo;
 import cn.account.bean.vo.ResultOfBIndDriverLicenseVo;
 import cn.account.bean.vo.UnbindTheOtherDriverUseMyCarVo;
@@ -645,8 +646,13 @@ public interface IAccountService {
 	 * @return
 	 */
 	public Map<String, String> detailsTrafficQuery(String zjz, String sourceOfCertification)throws Exception;
-	
-
+	/**
+	 * 重新认证
+	 * @param reauthenticationVo
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, String> reauthentication(ReauthenticationVo reauthenticationVo) throws Exception;
 
 
 }
