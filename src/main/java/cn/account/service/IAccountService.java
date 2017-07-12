@@ -24,6 +24,7 @@ import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
+import cn.account.bean.vo.IdentificationOfAuditResultsVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyBusinessVo;
@@ -653,6 +654,12 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public Map<String, String> reauthentication(ReauthenticationVo reauthenticationVo) throws Exception;
-
-
+	/**
+	 * 查询星级用户认证
+	 * @param idCard
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public IdentificationOfAuditResultsVo getIdentificationOfAuditResults(String idCard,String sourceOfCertification)throws Exception;
 }

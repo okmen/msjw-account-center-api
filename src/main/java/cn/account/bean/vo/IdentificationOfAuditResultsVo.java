@@ -1,5 +1,7 @@
 package cn.account.bean.vo;
 
+import java.io.Serializable;
+
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 /**
@@ -7,7 +9,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
  * @author Mbenben
  *
  */
-public class IdentificationOfAuditResultsVo {
+public class IdentificationOfAuditResultsVo implements Serializable{
 	
 	private String RZLX; //认证  1车主本人2非车主本人3驾驶人
 	private String SHSJ; //信息登记时间
