@@ -661,5 +661,5 @@ public interface IAccountService {
 	 * @return
 	 * @throws Exception
 	 */
-	public IdentificationOfAuditResultsVo getIdentificationOfAuditResults(String idCard,String sourceOfCertification)throws Exception;
+	public List<IdentificationOfAuditResultsVo> getIdentificationOfAuditResults(String idCard,String sourceOfCertification)throws Exception;
 }
