@@ -28,7 +28,14 @@ public class MotorVehicleBusiness implements Serializable{
 	private String YWLX;//1-补领机动车行驶证、2-机动车补检验合格、3-补领机动车牌号码、4-申请机动车临牌、5-换领机动车行驶证、6-机动车变更联系方式、
 	private String ZHCLZT;//(0待初审，3待初审，1初审通过，待制证，2车管已制证，TB退办)
 	private String ZSXXDZ;//住所详细地址
+	private String ZHCLSJ; //处理时间
 	
+	public String getZHCLSJ() {
+		return ZHCLSJ;
+	}
+	public void setZHCLSJ(String zHCLSJ) {
+		ZHCLSJ = zHCLSJ;
+	}
 	public String getFJSZD() {
 		return FJSZD;
 	}
