@@ -20,6 +20,11 @@ public class LoginReturnBeanVo extends BaseBean implements Serializable{
 	 * 认证基本信息
 	 */
 	private AuthenticationBasicInformationVo authenticationBasicInformation;
+	/**
+	 * 档案编号
+	 */
+	private String fileNumber;
+	
 	private List<Car> cars;
 	/**
 	 * 身份认证审核结果
@@ -42,6 +47,12 @@ public class LoginReturnBeanVo extends BaseBean implements Serializable{
 	}
 	public void setCars(List<Car> cars) {
 		this.cars = cars;
+	}
+	public String getFileNumber() {
+		return fileNumber;
+	}
+	public void setFileNumber(String fileNumber) {
+		this.fileNumber = fileNumber;
 	}
 	
 }
