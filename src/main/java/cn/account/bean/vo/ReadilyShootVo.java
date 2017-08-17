@@ -166,6 +166,10 @@ public class ReadilyShootVo implements Serializable{
 	 * 违法行为1
 	 */
 	private String wfxw1;
+	/**
+	 * 是否实名 0  -非实名  1-实名认证过
+	 */
+	private String shsm; 
 
 	public String getLicensePlateNumber() {
 		return licensePlateNumber;
@@ -409,6 +413,14 @@ public class ReadilyShootVo implements Serializable{
 
 	public void setWfxw1(String wfxw1) {
 		this.wfxw1 = wfxw1;
+	}
+	
+	public String getShsm() {
+		return shsm;
+	}
+
+	public void setShsm(String shsm) {
+		this.shsm = shsm;
 	}
 
 	@Override
