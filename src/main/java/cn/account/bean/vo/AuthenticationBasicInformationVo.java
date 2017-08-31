@@ -46,6 +46,10 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 	 * 号牌种类
 	 */
 	private String plateType;
+	/**
+	 * 状态
+	 */
+	private String zt;
 	
 	public String getTrueName() {
 		return trueName;
@@ -88,6 +92,13 @@ public class AuthenticationBasicInformationVo  implements Serializable{
 	}
 	public void setPlateType(String plateType) {
 		this.plateType = plateType;
+	}
+	
+	public String getZt() {
+		return zt;
+	}
+	public void setZt(String zt) {
+		this.zt = zt;
 	}
 	@Override 
     public String toString() { 

@@ -662,4 +662,13 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public List<IdentificationOfAuditResultsVo> getIdentificationOfAuditResults(String idCard,String sourceOfCertification)throws Exception;
+	/**
+	 * 支付宝一键注册
+	 * @param userName
+	 * @param identityCard
+	 * @param mobilephone
+	 * @param sourceOfCertification
+	 * @throws Exception 
+	 */
+	public Map<String, Object> alipayAKeyRegister(String userName, String identityCard, String mobilephone,String sourceOfCertification) throws Exception;
 }
