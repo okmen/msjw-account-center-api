@@ -428,8 +428,8 @@ public class ReadilyShootVo implements Serializable{
 		return "ReadilyShootVo [licensePlateNumber=" + licensePlateNumber + ", licensePlateType=" + licensePlateType
 				+ ", illegalSections=" + illegalSections + ", illegalTime=" + illegalTime + ", inputMan=" + inputMan
 				+ ", inputManName=" + inputManName + ", inputManPhone=" + inputManPhone + ", callAccount=" + callAccount
-				+ ", reportImgOne=" + reportImgOne + ", reportImgTwo=" + reportImgTwo + ", reportImgThree="
-				+ reportImgThree + ", reportImgFour=" + reportImgFour + ", reportImgFive=" + reportImgFive
+				+ ", reportImgOne=" + "随手拍图片1不显示" + ", reportImgTwo=" + "随手拍图片2不显示" + ", reportImgThree="
+				+ "随手拍图片3不显示" + ", reportImgFour=" + reportImgFour + ", reportImgFive=" + reportImgFive
 				+ ", reportVideoPath=" + reportVideoPath + ", userSource=" + userSource + ", userIdCard=" + userIdCard
 				+ ", openId=" + openId + ", unionId=" + unionId + ", isRealName=" + isRealName + ", carCompanyId="
 				+ carCompanyId + ", carEquipmentId=" + carEquipmentId + ", bankCardNumber=" + bankCardNumber
