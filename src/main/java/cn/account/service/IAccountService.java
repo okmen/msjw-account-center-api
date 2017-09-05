@@ -663,6 +663,7 @@ public interface IAccountService {
 	 */
 	public List<IdentificationOfAuditResultsVo> getIdentificationOfAuditResults(String idCard,String sourceOfCertification)throws Exception;
 	/**
+
 	 * 支付宝一键注册
 	 * @param userName
 	 * @param identityCard
@@ -671,4 +672,13 @@ public interface IAccountService {
 	 * @throws Exception 
 	 */
 	public Map<String, Object> alipayAKeyRegister(String userName, String identityCard, String mobilephone,String sourceOfCertification) throws Exception;
+	 /** 接入授权
+	 * @param mobilephone
+	 * @param identityCard
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean accessAuthorization(String mobilephone ,String identityCard ,String userSource)throws Exception;
+
 }
