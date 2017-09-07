@@ -3,15 +3,23 @@ package cn.account.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 public class UserBindAlipay implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String userId;
 	private String idCard;
 	private String mobileNumber;
-	private Date bindTime;
-	private Date unBindTime;
+	private Date bindDate;
+	private Date unbindDate;
 	private int isBind;
 	private String clientType;
+	private String realName;
 	public int getId() {
 		return id;
 	}
@@ -36,17 +44,18 @@ public class UserBindAlipay implements Serializable{
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-	public Date getBindTime() {
-		return bindTime;
+	
+	public Date getBindDate() {
+		return bindDate;
 	}
-	public void setBindTime(Date bindTime) {
-		this.bindTime = bindTime;
+	public void setBindDate(Date bindDate) {
+		this.bindDate = bindDate;
 	}
-	public Date getUnBindTime() {
-		return unBindTime;
+	public Date getUnbindDate() {
+		return unbindDate;
 	}
-	public void setUnBindTime(Date unBindTime) {
-		this.unBindTime = unBindTime;
+	public void setUnbindDate(Date unbindDate) {
+		this.unbindDate = unbindDate;
 	}
 	public int getIsBind() {
 		return isBind;
@@ -60,11 +69,17 @@ public class UserBindAlipay implements Serializable{
 	public void setClientType(String clientType) {
 		this.clientType = clientType;
 	}
-	@Override
-	public String toString() {
-		return "UserBindAlipay [id=" + id + ", userId=" + userId + ", idCard=" + idCard + ", mobileNumber="
-				+ mobileNumber + ", bindTime=" + bindTime + ", unBindTime=" + unBindTime + ", isBind=" + isBind
-				+ ", clientType=" + clientType + "]";
+	
+	public String getRealName() {
+		return realName;
 	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	
+	@Override 
+    public String toString() { 
+       return ReflectionToStringBuilder.toString(this); 
+    }
 	
 }
