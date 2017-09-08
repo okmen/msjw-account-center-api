@@ -21,6 +21,7 @@ import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
 import cn.account.bean.vo.BindDriverLicenseVo;
 import cn.account.bean.vo.BindTheVehicleVo;
+import cn.account.bean.vo.BrushFaceVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
@@ -680,5 +681,12 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public BaseBean accessAuthorization(String mobilephone ,String identityCard ,String userSource)throws Exception;
+	/**
+	 * 微信刷脸授权
+	 * @param brushFaceVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean weChatBrushFaceAuthentication(BrushFaceVo brushFaceVo)throws Exception;
 
 }
