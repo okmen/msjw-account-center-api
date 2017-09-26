@@ -1,21 +1,14 @@
 package cn.account.service;
 
-import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
 
 import cn.account.bean.Documentation;
-import cn.account.bean.ElectronicPolicyBean;
-
-import cn.account.bean.ReservationBean;
-
-
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
-import cn.account.bean.UserBindAlipay;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
@@ -688,5 +681,13 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public BaseBean weChatBrushFaceAuthentication(BrushFaceVo brushFaceVo)throws Exception;
+	/**
+	 * 车辆绑定审核结果查询
+	 * @param identityCardNo
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean queryVehicleBindAuditResult(String identityCardNo, String sourceOfCertification)throws Exception;
 
 }
