@@ -9,6 +9,7 @@ import cn.account.bean.Documentation;
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
+import cn.account.bean.UserBindAlipay;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
@@ -40,6 +41,21 @@ import cn.sdk.bean.BaseBean;
  * @author suntao
  */
 public interface IAccountService {
+	/**
+	 * 查询
+	 * @param page
+	 * @param pageSize
+	 * @return
+	 */
+	public List<UserBind> getUserBinds(int page,int pageSize);
+	
+	/**
+	 * 查询
+	 * @param page
+	 * @param pageSize
+	 * @return
+	 */
+	public List<UserBindAlipay> getUserBindAlipays(int page,int pageSize);
 	/**
 	 * 重置密码
 	 * @param idCard 身份证
