@@ -13,13 +13,16 @@ import cn.account.bean.UserBindAlipay;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
+import cn.account.bean.vo.BindCompanyCarVo;
 import cn.account.bean.vo.BindDriverLicenseVo;
 import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.BrushFaceVo;
+import cn.account.bean.vo.CompanyRegisterVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
 import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
 import cn.account.bean.vo.IdentificationOfAuditResultsVo;
+import cn.account.bean.vo.InformationCollectionVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyBusinessVo;
@@ -698,12 +701,72 @@ public interface IAccountService {
 	 */
 	public BaseBean weChatBrushFaceAuthentication(BrushFaceVo brushFaceVo)throws Exception;
 	/**
+<<<<<<< Updated upstream
 	 * 车辆绑定审核结果查询
 	 * @param identityCardNo
+=======
+	 * 公车注册
+	 * @param companyRegisterVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean companyRegister(CompanyRegisterVo companyRegisterVo)throws Exception;
+	/**
+	 * 查询单位注册
+	 * @param organizationCodeNumber
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean queryCompanyRegister(String organizationCodeNumber,String sourceOfCertification)throws Exception;
+	/**
+	 * 单位用户登录
+	 * @param loginUser
+	 * @param loginPwd
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean companyUserLogin(String loginUser,String loginPwd ,String sourceOfCertification)throws Exception;
+	/**
+	 * 密码修改
+	 * @param loginUser
+	 * @param oldPwd
+	 * @param newPwd
 	 * @param sourceOfCertification
 	 * @return
 	 * @throws Exception
 	 */
 	public BaseBean queryVehicleBindAuditResult(String identityCardNo, String sourceOfCertification)throws Exception;
 
+	public BaseBean companyUserChangePwd(String loginUser,String oldPwd ,String newPwd ,String sourceOfCertification)throws Exception;
+	/**
+	 * 绑定单位车辆
+	 * @param bindCompanyCarVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean bindCompanyCar(BindCompanyCarVo bindCompanyCarVo)throws Exception;
+	/**
+	 * 本人名下车辆查询
+	 * @param loginUser
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean getMyCompanyCars(String loginUser, String sourceOfCertification)throws Exception;
+	/**
+	 * 信息采集
+	 * @param informationCollectionVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean informationCollection(InformationCollectionVo informationCollectionVo)throws Exception;
+	/**
+	 * 信息采集查询
+	 * @param informationCollectionVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean queryInformationCollection(InformationCollectionVo informationCollectionVo)throws Exception;
 }
