@@ -23,6 +23,7 @@ public class InformationCollectionVo implements Serializable{
 	private String identityCard;
 	private String mobilephone;
 	private String address;
+	private String issuingBrigade;
 	private String copyOfOwnerIdentityCard;
 	private String copyOfDriverLicense;
 	private String copyOfVehicleTravelLicense;
@@ -32,6 +33,13 @@ public class InformationCollectionVo implements Serializable{
 	private String userMobilepbone;
 	private String certificationType;
 	private String sourceOfCertification;
+	
+	public String getIssuingBrigade() {
+		return issuingBrigade;
+	}
+	public void setIssuingBrigade(String issuingBrigade) {
+		this.issuingBrigade = issuingBrigade;
+	}
 	public String getUserId() {
 		return userId;
 	}
@@ -181,14 +189,15 @@ public class InformationCollectionVo implements Serializable{
 		return "InformationCollectionVo [userId=" + userId + ", password=" + password + ", jkId=" + jkId
 				+ ", licenseNumber=" + licenseNumber + ", numberPlate=" + numberPlate + ", carType=" + carType
 				+ ", engineNumber=" + engineNumber + ", vehicleIdentificationNumber=" + vehicleIdentificationNumber
-				+ ", ValidityOfAnnualAudit=" + validityOfAnnualAudit + ", ownerIdentityCard=" + ownerIdentityCard
+				+ ", validityOfAnnualAudit=" + validityOfAnnualAudit + ", ownerIdentityCard=" + ownerIdentityCard
 				+ ", ownerMobilephone=" + ownerMobilephone + ", ownerAddress=" + ownerAddress + ", identityCard="
-				+ identityCard + ", mobilephone=" + mobilephone + ", address=" + address + ", copyOfOwnerIdentityCard="
-				+ copyOfOwnerIdentityCard + ", copyOfDriverLicense=" + copyOfDriverLicense
-				+ ", copyOfVehicleTravelLicense=" + copyOfVehicleTravelLicense + ", copyOfLegalEntity="
-				+ copyOfLegalEntity + ", copyOfApplicant=" + copyOfApplicant + ", loginUser=" + loginUser
-				+ ", userMobilepbone=" + userMobilepbone + ", certificationType=" + certificationType
+				+ identityCard + ", mobilephone=" + mobilephone + ", address=" + address + ", issuingBrigade="
+				+ issuingBrigade + ", copyOfOwnerIdentityCard=" + copyOfOwnerIdentityCard + ", copyOfDriverLicense="
+				+ copyOfDriverLicense + ", copyOfVehicleTravelLicense=" + copyOfVehicleTravelLicense
+				+ ", copyOfLegalEntity=" + copyOfLegalEntity + ", copyOfApplicant=" + copyOfApplicant + ", loginUser="
+				+ loginUser + ", userMobilepbone=" + userMobilepbone + ", certificationType=" + certificationType
 				+ ", sourceOfCertification=" + sourceOfCertification + "]";
 	}
+	
 	
 }
