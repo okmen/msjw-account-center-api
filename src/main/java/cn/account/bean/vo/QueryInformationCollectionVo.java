@@ -16,6 +16,21 @@ public class QueryInformationCollectionVo implements Serializable{
 	private String rfDescription;
 	private String rfId;
 	private String rfTime;
+	private String address;
+	private String issuingBrigade;
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getIssuingBrigade() {
+		return issuingBrigade;
+	}
+	public void setIssuingBrigade(String issuingBrigade) {
+		this.issuingBrigade = issuingBrigade;
+	}
 	public String getLicenseNumber() {
 		return licenseNumber;
 	}
@@ -68,7 +83,9 @@ public class QueryInformationCollectionVo implements Serializable{
 	public String toString() {
 		return "QueryInformationCollectionVo [licenseNumber=" + licenseNumber + ", numberPlate=" + numberPlate
 				+ ", status=" + status + ", auditDescription=" + auditDescription + ", rfStatus=" + rfStatus
-				+ ", rfDescription=" + rfDescription + ", rfId=" + rfId + ", rfTime=" + rfTime + "]";
+				+ ", rfDescription=" + rfDescription + ", rfId=" + rfId + ", rfTime=" + rfTime + ", address=" + address
+				+ ", issuingBrigade=" + issuingBrigade + "]";
 	}
+	
 	
 }
