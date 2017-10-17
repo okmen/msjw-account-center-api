@@ -27,13 +27,27 @@ public class InformationCollectionVo implements Serializable{
 	private String copyOfOwnerIdentityCard;
 	private String copyOfDriverLicense;
 	private String copyOfVehicleTravelLicense;
+	private String copyOfLegalEntityA;
 	private String copyOfLegalEntity;
 	private String copyOfApplicant;
 	private String loginUser;
 	private String userMobilepbone;
 	private String certificationType;
+	private String isAttached;
 	private String sourceOfCertification;
 	
+	public String getIsAttached() {
+		return isAttached;
+	}
+	public void setIsAttached(String isAttached) {
+		this.isAttached = isAttached;
+	}
+	public String getCopyOfLegalEntityA() {
+		return copyOfLegalEntityA;
+	}
+	public void setCopyOfLegalEntityA(String copyOfLegalEntityA) {
+		this.copyOfLegalEntityA = copyOfLegalEntityA;
+	}
 	public String getIssuingBrigade() {
 		return issuingBrigade;
 	}
@@ -194,8 +208,9 @@ public class InformationCollectionVo implements Serializable{
 				+ identityCard + ", mobilephone=" + mobilephone + ", address=" + address + ", issuingBrigade="
 				+ issuingBrigade + ", copyOfOwnerIdentityCard=" + copyOfOwnerIdentityCard + ", copyOfDriverLicense="
 				+ copyOfDriverLicense + ", copyOfVehicleTravelLicense=" + copyOfVehicleTravelLicense
-				+ ", copyOfLegalEntity=" + copyOfLegalEntity + ", copyOfApplicant=" + copyOfApplicant + ", loginUser="
-				+ loginUser + ", userMobilepbone=" + userMobilepbone + ", certificationType=" + certificationType
+				+ ", copyOfLegalEntityA=" + copyOfLegalEntityA + ", copyOfLegalEntity=" + copyOfLegalEntity
+				+ ", copyOfApplicant=" + copyOfApplicant + ", loginUser=" + loginUser + ", userMobilepbone="
+				+ userMobilepbone + ", certificationType=" + certificationType + ", isAttached=" + isAttached
 				+ ", sourceOfCertification=" + sourceOfCertification + "]";
 	}
 	
