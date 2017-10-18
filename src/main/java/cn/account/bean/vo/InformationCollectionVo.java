@@ -35,7 +35,14 @@ public class InformationCollectionVo implements Serializable{
 	private String certificationType;
 	private String isAttached;
 	private String sourceOfCertification;
+	private String legalEntityName;
 	
+	public String getLegalEntityName() {
+		return legalEntityName;
+	}
+	public void setLegalEntityName(String legalEntityName) {
+		this.legalEntityName = legalEntityName;
+	}
 	public String getIsAttached() {
 		return isAttached;
 	}
@@ -211,7 +218,7 @@ public class InformationCollectionVo implements Serializable{
 				+ ", copyOfLegalEntityA=" + copyOfLegalEntityA + ", copyOfLegalEntity=" + copyOfLegalEntity
 				+ ", copyOfApplicant=" + copyOfApplicant + ", loginUser=" + loginUser + ", userMobilepbone="
 				+ userMobilepbone + ", certificationType=" + certificationType + ", isAttached=" + isAttached
-				+ ", sourceOfCertification=" + sourceOfCertification + "]";
+				+ ", sourceOfCertification=" + sourceOfCertification + ", legalEntityName=" + legalEntityName + "]";
 	}
 	
 	
