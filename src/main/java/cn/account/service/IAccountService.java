@@ -769,4 +769,9 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public BaseBean queryInformationCollection(InformationCollectionVo informationCollectionVo)throws Exception;
+	
+	/**
+	 * 获取芝麻信用biz_no
+	 */
+	public BaseBean getBizNo(String certName, String certNo)throws Exception;
 }
