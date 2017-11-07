@@ -558,7 +558,7 @@ public interface IAccountService {
 	 * @return
 	 * @throws Exception
 	 */
-	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password) throws Exception;
+	public ResultOfReadilyShoot queryResultOfReadilyShoot(String reportSerialNumber,String password,String sourceOfCertification) throws Exception;
 	
 
 
