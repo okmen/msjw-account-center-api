@@ -774,4 +774,18 @@ public interface IAccountService {
 	 * 获取芝麻信用biz_no
 	 */
 	public BaseBean getBizNo(String certName, String certNo)throws Exception;
+	
+	/**
+	 * 根据openid获取UserBind信息
+	 * @param openId
+	 * @return
+	 */
+	public UserBind queryUserBindByOpenid(String openId)throws Exception;
+	
+	/**
+	 * 根据Userid获取UserBindAlipay信息
+	 * @param userId
+	 * @return
+	 */
+    public UserBindAlipay queryUserBindAlipayByUserid(String userId);
 }
