@@ -788,4 +788,18 @@ public interface IAccountService {
 	 * @return
 	 */
     public UserBindAlipay queryUserBindAlipayByUserid(String userId);
+    
+    /**
+	 * 根据mobileNumber获取UserBind信息
+	 * @param mobileNumber
+	 * @return
+	 */
+	public UserBind getUserBindByPhone(String mobileNumber);
+	
+	/**
+     * 根据mobileNumber获取UserBindAlipay信息
+     * @param userId
+     * @return
+     */
+    public UserBindAlipay getUserBindAlipayByPhone(String mobileNumber);
 }
