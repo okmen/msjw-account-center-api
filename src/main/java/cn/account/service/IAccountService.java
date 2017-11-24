@@ -794,12 +794,12 @@ public interface IAccountService {
 	 * @param mobileNumber
 	 * @return
 	 */
-	public UserBind getUserBindByPhone(String mobileNumber);
+	public List<UserBind> getUserBindByPhone(String mobileNumber);
 	
 	/**
      * 根据mobileNumber获取UserBindAlipay信息
      * @param userId
      * @return
      */
-    public UserBindAlipay getUserBindAlipayByPhone(String mobileNumber);
+    public List<UserBindAlipay> getUserBindAlipayByPhone(String mobileNumber);
 }
