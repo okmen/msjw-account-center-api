@@ -129,6 +129,15 @@ public interface IAccountService {
 	 */
 	public LoginReturnBeanVo alipayLogin(String loginName,String sourceOfCertification,String openId) throws Exception;
 	/**
+	 * 登录
+	 * @param 高德登录账号
+	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
+	 * @param openId 登录的openId 支付宝openId、微信openId
+	 * @return
+	 * @throws Exception
+	 */
+	public LoginReturnBeanVo gdLogin(String loginName,String password ,String sourceOfCertification) throws Exception;
+	/**
 	 * 
 	 * @param loginName 登录名称
 	 * @param sourceOfCertification 认证来源(A 移动APP C微信  Z支付宝   E邮政  W外网星火)
