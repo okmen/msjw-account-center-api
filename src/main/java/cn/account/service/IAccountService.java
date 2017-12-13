@@ -19,11 +19,13 @@ import cn.account.bean.vo.BindTheVehicleVo;
 import cn.account.bean.vo.BrushFaceVo;
 import cn.account.bean.vo.CompanyRegisterVo;
 import cn.account.bean.vo.DriverLicenseInformationSheetVo;
+import cn.account.bean.vo.DriverLicenseToSupplementThePermitBusinessVo;
 import cn.account.bean.vo.DrivingLicenseVo;
 import cn.account.bean.vo.ElectronicDriverLicenseVo;
 import cn.account.bean.vo.IdentificationOfAuditResultsVo;
 import cn.account.bean.vo.InformationCollectionVo;
 import cn.account.bean.vo.LoginReturnBeanVo;
+import cn.account.bean.vo.MotorVehicleBusiness;
 import cn.account.bean.vo.MotorVehicleInformationSheetVo;
 import cn.account.bean.vo.MyBusinessVo;
 import cn.account.bean.vo.MyDriverLicenseVo;
@@ -44,6 +46,25 @@ import cn.sdk.bean.BaseBean;
  * @author suntao
  */
 public interface IAccountService {
+	
+	/**
+	 * 驾驶证业务查询
+	 * @param identityCard
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public List<DriverLicenseToSupplementThePermitBusinessVo> getDriverLicenseBusiness(String identityCard,String sourceOfCertification) throws Exception;
+	
+	/**
+	 * 机动车业务查询
+	 * @param identityCard
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public List<MotorVehicleBusiness> getMotorVehicleBusiness(String identityCard,String sourceOfCertification) throws Exception;
+	
 	/**
 	 * 查询
 	 * @param page
