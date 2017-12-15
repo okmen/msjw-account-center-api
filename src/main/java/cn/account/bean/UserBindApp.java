@@ -26,6 +26,12 @@ public class UserBindApp implements Serializable{
 	private String realName;
 	
 	
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
 	public String getMobileNumber() {
 		return mobileNumber;
 	}

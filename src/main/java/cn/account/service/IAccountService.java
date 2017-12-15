@@ -10,6 +10,8 @@ import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
 import cn.account.bean.UserBindAlipay;
+import cn.account.bean.UserBindApp;
+import cn.account.bean.UserBindGd;
 import cn.account.bean.WechatUserInfoBean;
 import cn.account.bean.vo.AuthenticationBasicInformationVo;
 import cn.account.bean.vo.BindCarVo;
@@ -832,4 +834,28 @@ public interface IAccountService {
      * @return
      */
     public List<UserBindAlipay> getUserBindAlipayByPhone(String mobileNumber);
+    /**
+	 * 根据手机号获取UserBindGd
+	 * @param mobileNumber
+	 * @return
+	 */
+	public UserBindGd getUserBindGdByPhone(String mobileNumber);
+	/**
+	 * 根据十分钟解绑高德
+	 * @param idCard
+	 * @return
+	 */
+	public int unBindGdByIdCard(String idCard);
+	/**
+	 * 根据手机号获取UserBindApp
+	 * @param mobileNumber
+	 * @return
+	 */
+	public UserBindApp getUserBindAppByPhone(String mobileNumber);
+	/**
+	 * 根据身份证号解绑app
+	 * @param idCard
+	 * @return
+	 */
+	public int unBindAppByIdCard(String idCard);
 }
