@@ -6,6 +6,7 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 
 import cn.account.bean.Documentation;
+import cn.account.bean.InformationCollection;
 import cn.account.bean.ReadilyShoot;
 import cn.account.bean.ResultOfReadilyShoot;
 import cn.account.bean.UserBind;
@@ -801,6 +802,20 @@ public interface IAccountService {
 	 * @throws Exception
 	 */
 	public BaseBean queryInformationCollection(InformationCollectionVo informationCollectionVo)throws Exception;
+	/**
+	 * 信息采集
+	 * @param informationCollectionVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean informationCollection2(InformationCollection informationCollection)throws Exception;
+	/**
+	 * 信息采集查询
+	 * @param informationCollectionVo
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean queryInformationCollection2(InformationCollection informationCollection)throws Exception;
 	
 	/**
 	 * 获取芝麻信用biz_no
