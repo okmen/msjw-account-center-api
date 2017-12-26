@@ -15,7 +15,22 @@ public class InformationCollection implements Serializable{
 	private String rfId;
 	private String sourceOfCertification;
 	private String loginUser;
+	private String mobilePhone;
+	private String openId;
 	
+	
+	public String getMobilePhone() {
+		return mobilePhone;
+	}
+	public void setMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+	}
+	public String getOpenId() {
+		return openId;
+	}
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
 	public String getLoginUser() {
 		return loginUser;
 	}
