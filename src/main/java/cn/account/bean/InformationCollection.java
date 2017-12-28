@@ -17,8 +17,15 @@ public class InformationCollection implements Serializable{
 	private String loginUser;
 	private String mobilePhone;
 	private String openId;
+	private String carType;
 	
 	
+	public String getCarType() {
+		return carType;
+	}
+	public void setCarType(String carType) {
+		this.carType = carType;
+	}
 	public String getMobilePhone() {
 		return mobilePhone;
 	}
