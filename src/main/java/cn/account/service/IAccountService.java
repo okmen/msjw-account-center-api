@@ -50,6 +50,8 @@ import cn.sdk.bean.BaseBean;
  */
 public interface IAccountService {
 	
+	public String getTemplateSendUrl();
+	
 	/**
 	 * 驾驶证业务查询
 	 * @param identityCard
