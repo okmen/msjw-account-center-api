@@ -18,8 +18,14 @@ public class InformationCollection implements Serializable{
 	private String mobilePhone;
 	private String openId;
 	private String carType;
+	private String cjh4;
 	
-	
+	public String getCjh4() {
+		return cjh4;
+	}
+	public void setCjh4(String cjh4) {
+		this.cjh4 = cjh4;
+	}
 	public String getCarType() {
 		return carType;
 	}
