@@ -40,7 +40,27 @@ public class MyDriverLicenseVo extends BaseBean implements Serializable{
 	 * 是否已领取电子驾照 0-是，1-否
 	 */
 	private Integer isReceive;
+	/**
+	 * 记分（扣分）
+	 */
+	private String deductScore;
+	/**
+	 * 准驾车型
+	 */
+	private String carType;
 	
+	public String getDeductScore() {
+		return deductScore;
+	}
+	public void setDeductScore(String deductScore) {
+		this.deductScore = deductScore;
+	}
+	public String getCarType() {
+		return carType;
+	}
+	public void setCarType(String carType) {
+		this.carType = carType;
+	}
 	public String getFileNumber() {
 		return fileNumber;
 	}
