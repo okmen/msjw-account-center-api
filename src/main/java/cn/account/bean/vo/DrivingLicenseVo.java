@@ -4,12 +4,14 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
+import cn.sdk.bean.BaseBean;
+
 /**
  * 电子行驶证
  * @author Mbenben
  *
  */
-public class DrivingLicenseVo implements Serializable{
+public class DrivingLicenseVo extends BaseBean implements Serializable{
 	/**
 	 * 
 	 */
