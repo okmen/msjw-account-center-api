@@ -48,7 +48,37 @@ public class MyDriverLicenseVo extends BaseBean implements Serializable{
 	 * 准驾车型
 	 */
 	private String carType;
+	/**
+	 * 驾驶证号码
+	 */
+	private String driverLicenseNumber;
+	/**
+	 * 姓名
+	 */
+	private String name;
+	/**
+	 * 性别
+	 */
+	private String gender;
 	
+	public String getDriverLicenseNumber() {
+		return driverLicenseNumber;
+	}
+	public void setDriverLicenseNumber(String driverLicenseNumber) {
+		this.driverLicenseNumber = driverLicenseNumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getDeductScore() {
 		return deductScore;
 	}
