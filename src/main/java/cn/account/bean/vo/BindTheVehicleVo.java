@@ -5,12 +5,14 @@ import java.util.List;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
+import cn.sdk.bean.BaseBean;
+
 /**
  * 已绑定车辆
  * @author Mbenben
  *
  */
-public class BindTheVehicleVo implements Serializable{
+public class BindTheVehicleVo extends BaseBean implements Serializable{
 	/**
 	 * 
 	 */
