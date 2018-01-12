@@ -169,7 +169,31 @@ public class ReadilyShootVo implements Serializable{
 	/**
 	 * 是否实名 0  -非实名  1-实名认证过
 	 */
-	private String shsm; 
+	private String shsm;
+	/**
+	 * 经度
+	 */
+	private String gpsx;
+	/**
+	 * 纬度
+	 */
+	private String gpsy;
+	
+	public String getGpsx() {
+		return gpsx;
+	}
+
+	public void setGpsx(String gpsx) {
+		this.gpsx = gpsx;
+	}
+
+	public String getGpsy() {
+		return gpsy;
+	}
+
+	public void setGpsy(String gpsy) {
+		this.gpsy = gpsy;
+	}
 
 	public String getLicensePlateNumber() {
 		return licensePlateNumber;
