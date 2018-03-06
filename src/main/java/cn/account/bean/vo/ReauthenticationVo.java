@@ -13,7 +13,15 @@ public class ReauthenticationVo implements Serializable{
 	private String sourceOfCertification;// （5重新认证）
 	private String photo6;// 当事人手持身份证照片
 	private String photo9;// 车主身份证正面照片
+	private String openId;//openId
+	
 
+	public String getOpenId() {
+		return openId;
+	}
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
 	public String getIdentityCard() {
 		return identityCard;
 	}
