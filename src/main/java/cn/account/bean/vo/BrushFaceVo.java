@@ -14,6 +14,7 @@ public class BrushFaceVo implements Serializable{
 	private String certificationType;
 	private String photo6;
 	private String openId;
+	private String token;
 	public String getName() {
 		return name;
 	}
@@ -56,11 +57,18 @@ public class BrushFaceVo implements Serializable{
 	public void setOpenId(String openId) {
 		this.openId = openId;
 	}
+	
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
 	@Override
 	public String toString() {
 		return "BrushFaceVo [name=" + name + ", identityCard=" + identityCard + ", mobilephone=" + mobilephone
 				+ ", userSource=" + userSource + ", certificationType=" + certificationType + ", photo6=" + photo6
-				+ ", openId=" + openId + "]";
+				+ ", openId=" + openId + ", token=" + token + "]";
 	} 
 	
 }
